@@ -18,22 +18,26 @@
     <!-- Header/Navigation -->
     <header>
         <nav class="navbar">
-            <div class="nav-brand">Portofolio</div>
-            <ul class="nav-menu">
-                <li><a href="#home">Home</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#experience">Experience</a></li>
-                <li><a href="#skills">Skills</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-            <div class="theme-toggle">
-                <i class="fas fa-moon" id="theme-icon"></i>
+            <div class="nav-left">
+                <div class="nav-brand">Portofolio</div>
+                <ul class="nav-menu">
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#experience">Experience</a></li>
+                    <li><a href="#skills">Skills</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
             </div>
-            <div class="hamburger">
-                <span class="bar"></span>
-                <span class="bar"></span>
-                <span class="bar"></span>
+            <div class="nav-right">
+                <div class="theme-toggle" id="themeToggle">
+                    <i class="fas fa-moon" id="theme-icon"></i>
+                </div>
+                <div class="hamburger">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </div>
             </div>
         </nav>
     </header>
@@ -45,6 +49,20 @@
             <h1>Hi, I'm <span class="highlight">Leonardus Dale
                     Masan</span></h1>
             <h3 class="typing-text">Aspiring Data Scientist & Fullstack Developer</h3>
+            
+            <!-- Social Media Links -->
+            <div class="hero-social">
+                <a href="https://github.com/Daalleee" target="_blank" title="GitHub" class="social-link">
+                    <i class="fab fa-github"></i>
+                </a>
+                <a href="https://www.linkedin.com/in/leonardus-d-masan-56267736a/" target="_blank" title="LinkedIn" class="social-link">
+                    <i class="fab fa-linkedin-in"></i>
+                </a>
+                <a href="https://www.instagram.com/daalleeeee_/" target="_blank" title="Instagram" class="social-link">
+                    <i class="fab fa-instagram"></i>
+                </a>
+            </div>
+            
             <div class="hero-focus">
                 <span class="focus-badge"><i class="fas fa-chart-bar"></i> Data Science</span>
                 <span class="focus-badge"><i class="fas fa-table"></i> Data Analysis</span>
@@ -69,48 +87,45 @@
     <section id="about" class="about">
         <div class="container">
             <h2 class="section-title">About Me</h2>
-            <div class="about-content">
-                <div class="about-image">
-                    <img src="images/fotosaya.jpg" alt="About Dale Masan" class="about-profile-image" loading="lazy">
-                </div>
+            <div class="about-content-center">
                 <div class="about-text">
-                    <p class="about-intro">Hello! I'm <strong>Leonardus Dale Masan</strong>, an Informatics student from Larantuka, East Flores, NTT, Indonesia. I'm passionate about transforming data into insights and building intelligent solutions that make a real impact.</p>
-                    
+                    <p class="about-intro">I have a deep interest in data and technology. From a collection of numbers and information, I can find meaningful insights and transform them into real solutions that can be used to solve everyday problems.</p>
+
                     <div class="about-focus">
-                        <h3>My Focus Areas</h3>
+                        <h3>My Core Expertise</h3>
                         <div class="focus-grid">
                             <div class="focus-card">
                                 <div class="focus-card-icon">
                                     <i class="fas fa-chart-bar"></i>
                                 </div>
                                 <h4>Data Science</h4>
-                                <p>Exploring patterns and extracting meaningful insights from complex datasets to drive informed decision-making and business growth.</p>
+                                <p>Identifying patterns, trends, and key insights from complex data.</p>
                             </div>
                             <div class="focus-card">
                                 <div class="focus-card-icon">
                                     <i class="fas fa-table"></i>
                                 </div>
                                 <h4>Data Analysis</h4>
-                                <p>Transforming raw data into actionable insights through statistical analysis, visualization, and storytelling with tools like Power BI and Python.</p>
+                                <p>Making data-driven decisions through visualization and statistical analysis.</p>
                             </div>
                             <div class="focus-card">
                                 <div class="focus-card-icon">
                                     <i class="fas fa-brain"></i>
                                 </div>
                                 <h4>Machine Learning</h4>
-                                <p>Building predictive models and intelligent systems using algorithms like Random Forest, NLP, and Computer Vision to solve real-world problems.</p>
+                                <p>Building predictive and intelligent models for real-world challenges.</p>
                             </div>
                             <div class="focus-card">
                                 <div class="focus-card-icon">
                                     <i class="fas fa-code"></i>
                                 </div>
                                 <h4>Fullstack Development</h4>
-                                <p>Creating robust web applications from database to UI using Laravel, PHP, and modern frontend technologies for seamless user experiences.</p>
+                                <p>Creating modern, interactive, and efficient web applications.</p>
                             </div>
                         </div>
                     </div>
-                    
-                    <p class="about-closing">Currently in my 6th semester, I'm continuously expanding my knowledge in Big Data, Data Mining, and Business Intelligence while building real-world projects. I'm actively seeking internship opportunities in Data Science and related fields to further grow my skills and contribute to innovative solutions.</p>
+
+                    <p class="about-closing">I see every project as an opportunity to grow, sharpen my skills, and make a real impact through technology. I am ready to contribute, learn, and create innovations that can be beneficial to many people.</p>
                 </div>
             </div>
         </div>
@@ -120,8 +135,8 @@
     <section id="experience" class="experience">
         <div class="container">
             <h2 class="section-title">My Learning Journey</h2>
-            <p class="timeline-intro">I began my journey in Informatics around <strong>August 2023</strong>, starting from very basic programming knowledge. At the beginning, I faced difficulties in understanding programming logic and problem-solving, but over time I improved through consistent practice and learning.</p>
-            
+            <p class="timeline-intro">I embarked on my Informatics journey in <strong>August 2023</strong>, starting with foundational programming knowledge. Through dedication and consistent practice, I transformed initial challenges into strengths, developing robust problem-solving skills and technical expertise.</p>
+
             <div class="timeline">
                 <!-- Semester 1 -->
                 <div class="timeline-item">
@@ -130,15 +145,15 @@
                             <i class="fas fa-book"></i>
                         </div>
                         <div class="timeline-text">
-                            <h3>Semester 1 - Foundations</h3>
+                            <h3>Semester 1 - Building Foundations</h3>
                             <span class="timeline-date">2023</span>
-                            <p>In my first semester, I was introduced to fundamental concepts such as:</p>
+                            <p>Established core fundamentals in computer science:</p>
                             <ul class="timeline-list">
                                 <li>Algorithms and Programming</li>
                                 <li>Discrete Mathematics</li>
                                 <li>Digital Systems</li>
                             </ul>
-                            <p class="timeline-note">This phase was challenging as I was still adapting to logical thinking and coding fundamentals.</p>
+                            <p class="timeline-note">Developed logical thinking and mastered programming fundamentals through hands-on practice.</p>
                         </div>
                     </div>
                 </div>
@@ -150,15 +165,15 @@
                             <i class="fas fa-code"></i>
                         </div>
                         <div class="timeline-text">
-                            <h3>Semester 2 - Building Momentum</h3>
+                            <h3>Semester 2 - Developing Proficiency</h3>
                             <span class="timeline-date">2024</span>
-                            <p>I started to build momentum by focusing more on practice and understanding core programming concepts:</p>
+                            <p>Advanced my programming capabilities through:</p>
                             <ul class="timeline-list">
                                 <li>Object-Oriented Programming</li>
                                 <li>Data Analysis Programming</li>
                                 <li>Statistics and Probability</li>
                             </ul>
-                            <p class="timeline-note">During this stage, I became more comfortable with coding and began to understand how programs are structured.</p>
+                            <p class="timeline-note">Gained confidence in software development and understood program architecture and design principles.</p>
                         </div>
                     </div>
                 </div>
@@ -170,15 +185,15 @@
                             <i class="fas fa-database"></i>
                         </div>
                         <div class="timeline-text">
-                            <h3>Semester 3 - Strengthening Fundamentals</h3>
+                            <h3>Semester 3 - Systems & Data Management</h3>
                             <span class="timeline-date">2024</span>
-                            <p>I strengthened my fundamentals in systems and data:</p>
+                            <p>Deepened expertise in data and systems:</p>
                             <ul class="timeline-list">
                                 <li>Database Design and SQL</li>
                                 <li>Artificial Intelligence</li>
                                 <li>Advanced Object-Oriented Programming</li>
                             </ul>
-                            <p class="timeline-note">This semester helped me understand how data is managed and how systems interact.</p>
+                            <p class="timeline-note">Mastered data management principles and system architecture fundamentals.</p>
                         </div>
                     </div>
                 </div>
@@ -190,15 +205,15 @@
                             <i class="fas fa-brain"></i>
                         </div>
                         <div class="timeline-text">
-                            <h3>Semester 4 - Machine Learning</h3>
+                            <h3>Semester 4 - Machine Learning & AI</h3>
                             <span class="timeline-date">2025</span>
-                            <p>This was an important milestone where I started exploring:</p>
+                            <p>Explored intelligent systems and algorithms:</p>
                             <ul class="timeline-list">
                                 <li>Machine Learning</li>
                                 <li>Algorithm Analysis</li>
                                 <li>Distributed Systems</li>
                             </ul>
-                            <p class="timeline-note">I began learning how to use data to solve problems and build intelligent systems.</p>
+                            <p class="timeline-note">Learned to leverage data for building predictive models and intelligent solutions.</p>
                         </div>
                     </div>
                 </div>
@@ -210,16 +225,16 @@
                             <i class="fas fa-eye"></i>
                         </div>
                         <div class="timeline-text">
-                            <h3>Semester 5 - Advanced Topics</h3>
+                            <h3>Semester 5 - Specialized Technologies</h3>
                             <span class="timeline-date">2025</span>
-                            <p>I focused more on advanced and specialized topics:</p>
+                            <p>Advanced into specialized domains:</p>
                             <ul class="timeline-list">
                                 <li>Data Warehouse</li>
                                 <li>Natural Language Processing (NLP)</li>
                                 <li>Computer Vision</li>
                                 <li>Cryptography</li>
                             </ul>
-                            <p class="timeline-note">I also started working on real projects, especially in data analysis and machine learning.</p>
+                            <p class="timeline-note">Applied knowledge to real-world projects in data analysis and machine learning.</p>
                         </div>
                     </div>
                 </div>
@@ -231,16 +246,16 @@
                             <i class="fas fa-chart-line"></i>
                         </div>
                         <div class="timeline-text">
-                            <h3>Semester 6 - Current Focus</h3>
+                            <h3>Semester 6 - Advanced Analytics</h3>
                             <span class="timeline-date">2026 – Present</span>
-                            <p>Currently, I am expanding my knowledge in:</p>
+                            <p>Expanding expertise in cutting-edge technologies:</p>
                             <ul class="timeline-list">
                                 <li>Big Data</li>
                                 <li>Data Mining</li>
                                 <li>Optimization Algorithms</li>
                                 <li>Business Intelligence</li>
                             </ul>
-                            <p class="timeline-note">At this stage, I am focusing on building real-world projects, strengthening problem-solving skills, and preparing for internships in Data Science and related fields.</p>
+                            <p class="timeline-note">Currently focused on developing production-ready solutions and preparing for professional opportunities in Data Science.</p>
                         </div>
                     </div>
                 </div>
@@ -252,15 +267,15 @@
                 <div class="growth-grid">
                     <div class="growth-item">
                         <i class="fas fa-arrow-right"></i>
-                        <span>From learning basic programming to building real projects</span>
+                        <span>Progressed from learning programming basics to building production-ready applications</span>
                     </div>
                     <div class="growth-item">
                         <i class="fas fa-arrow-right"></i>
-                        <span>From confusion in coding to understanding logic and problem-solving</span>
+                        <span>Evolved from struggling with code to mastering logical problem-solving</span>
                     </div>
                     <div class="growth-item">
                         <i class="fas fa-arrow-right"></i>
-                        <span>From theory to practical implementation</span>
+                        <span>Transformed theoretical knowledge into practical, real-world implementations</span>
                     </div>
                 </div>
             </div>
@@ -268,7 +283,7 @@
             <!-- Career Focus -->
             <div class="career-focus">
                 <h3>Career Focus</h3>
-                <p>I am currently focusing on developing skills in:</p>
+                <p>I am dedicated to advancing my expertise in:</p>
                 <div class="focus-areas">
                     <div class="focus-item">
                         <i class="fas fa-chart-bar"></i>
@@ -816,41 +831,46 @@
             <div class="contact-container">
 
                 <div class="contact-form-container">
-                    <p><strong>Please note: This contact form is not yet
-                            active for direct email delivery. The portfolio
-                            owner has not yet opened this form for direct
-                            sending.</strong></p>
-                    <p>For now, please contact me directly via email at <a
-                            href="mailto:dalemasan10@gmail.com">dalemasan10@gmail.com</a>.</p>
-                    <form class="contact-form" id="contactForm">
+                    <p class="contact-intro">Have a question or want to work together? Send me a message!</p>
+                    
+                    <form class="contact-form" id="contactForm" action="https://api.web3forms.com/submit" method="POST">
+                        <input type="hidden" name="access_key" value="11555ae3-0cc4-4b27-adab-de85db6c21e7">
+                        <input type="hidden" name="subject" value="New Portfolio Message">
+                        <input type="hidden" name="from_name" value="Portfolio Website">
+                        <input type="hidden" name="redirect" value="https://web3forms.com/success">
+                        <input type="hidden" name="to_email" value="dalenomasano@gmail.com">
+                        
                         <div class="form-group">
-                            <input type="text" id="name" name="name" placeholder="Your Name" required>
+                            <label for="name"><i class="fas fa-user"></i> Your Name</label>
+                            <input type="text" id="name" name="name" placeholder="John Doe" required>
                             <span class="error-message" id="name-error"></span>
                         </div>
                         <div class="form-group">
-                            <input type="email" id="email" name="email" placeholder="Your Email" required>
+                            <label for="email"><i class="fas fa-envelope"></i> Your Email</label>
+                            <input type="email" id="email" name="email" placeholder="your@email.com" required>
                             <span class="error-message" id="email-error"></span>
                         </div>
                         <div class="form-group">
-                            <input type="text" id="subject" name="subject" placeholder="Subject" required>
+                            <label for="subject"><i class="fas fa-tag"></i> Subject</label>
+                            <input type="text" id="subject" name="subject" placeholder="Project Inquiry" required>
                             <span class="error-message" id="subject-error"></span>
                         </div>
                         <div class="form-group">
-                            <textarea id="message" name="message" rows="5" placeholder="Your Message"
+                            <label for="message"><i class="fas fa-comment"></i> Message</label>
+                            <textarea id="message" name="message" rows="5" placeholder="Your message here..."
                                 required></textarea>
                             <span class="error-message" id="message-error"></span>
                         </div>
                         <button type="submit" class="btn btn-primary" id="submitBtn">
-                            <span class="btn-text">Submit Message</span>
+                            <span class="btn-text"><i class="fas fa-paper-plane"></i> Send Message</span>
                             <span class="btn-loading" style="display: none;">
                                 <i class="fas fa-spinner fa-spin"></i> Sending...
                             </span>
                         </button>
                         <div class="form-message" id="formMessage"></div>
                     </form>
-                    <p><small>Upon submission, you will receive a
-                            notification that the form is not active for
-                            direct delivery.</small></p>
+                    
+                    <p class="contact-note"><i class="fas fa-shield-alt"></i> Your information is safe. I'll get back to you within 24-48 hours.</p>
                 </div>
             </div>
         </div>
@@ -860,13 +880,6 @@
     <footer class="footer">
         <div class="container">
             <p>&copy; 2025 Leonardus Dale Masan. All rights reserved.</p>
-            <div class="social-links">
-                <a href="https://github.com/Daalleee" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
-                <a href="https://www.linkedin.com/in/leonardus-d-masan-56267736a/" target="_blank" title="LinkedIn"><i
-                        class="fab fa-linkedin-in"></i></a>
-                <a href="https://www.instagram.com/daalleeeee_/" target="_blank" title="Instagram"><i
-                        class="fab fa-instagram"></i></a>
-            </div>
         </div>
     </footer>
 

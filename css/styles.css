@@ -34,6 +34,18 @@ body {
     transition: all 0.3s ease;
 }
 
+.navbar .nav-left {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.navbar .nav-right {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
 .navbar.scrolled {
     padding: 15px 5%;
     background-color: rgba(255, 255, 255, 0.95);
@@ -50,6 +62,8 @@ body {
 .nav-menu {
     display: flex;
     list-style: none;
+    margin: 0;
+    padding: 0;
 }
 
 .nav-menu li {
@@ -104,10 +118,20 @@ body {
     font-size: 1.5rem;
     color: #4e89ae;
     transition: color 0.3s ease;
+    z-index: 1001;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 8px;
+    border-radius: 50%;
+    background: transparent;
+    border: none;
 }
 
 .theme-toggle:hover {
     color: #3a6d8c;
+    background: rgba(78, 137, 174, 0.1);
 }
 
 /* Dark Theme Styles */
@@ -150,6 +174,22 @@ body.dark-theme {
 
 .dark-theme .hero-focus {
     justify-content: center;
+}
+
+.dark-theme .hero-social {
+    justify-content: center;
+}
+
+.dark-theme .social-link {
+    background: linear-gradient(135deg, rgba(107, 159, 211, 0.15) 0%, rgba(78, 137, 174, 0.15) 100%);
+    border-color: rgba(107, 159, 211, 0.4);
+    color: #6b9fd3;
+}
+
+.dark-theme .social-link:hover {
+    background: linear-gradient(135deg, #6b9fd3 0%, #4e89ae 100%);
+    color: white;
+    border-color: #6b9fd3;
 }
 
 .dark-theme .focus-badge {
@@ -290,11 +330,15 @@ body.dark-theme {
 }
 
 /* Hero Section */
+body {
+    padding-top: 80px;
+}
+
 .hero {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    min-height: 100vh;
+    min-height: calc(100vh - 80px);
     padding: 0 10%;
     background: linear-gradient(135deg, #f5f7fa 0%, #e4edf5 100%);
     position: relative;
@@ -360,6 +404,37 @@ body.dark-theme {
 @keyframes blink {
     0%, 50% { border-color: #4e89ae; }
     51%, 100% { border-color: transparent; }
+}
+
+/* Hero Social Links */
+.hero-social {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 25px;
+    justify-content: flex-start;
+}
+
+.social-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 45px;
+    height: 45px;
+    background: linear-gradient(135deg, rgba(78, 137, 174, 0.1) 0%, rgba(58, 109, 140, 0.1) 100%);
+    border: 2px solid rgba(78, 137, 174, 0.3);
+    border-radius: 50%;
+    color: #4e89ae;
+    font-size: 1.3rem;
+    transition: all 0.3s ease;
+    text-decoration: none;
+}
+
+.social-link:hover {
+    background: linear-gradient(135deg, #4e89ae 0%, #3a6d8c 100%);
+    color: white;
+    border-color: #4e89ae;
+    transform: translateY(-5px) scale(1.1);
+    box-shadow: 0 8px 20px rgba(78, 137, 174, 0.4);
 }
 
 /* Hero Focus Badges */
@@ -569,30 +644,13 @@ section {
     background-color: #fff;
 }
 
-.about-content {
-    display: flex;
-    gap: 50px;
-    align-items: center;
-}
-
-.about-image {
-    flex: 1;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.about-profile-image {
-    width: 300px;
-    height: 300px;
-    border-radius: 50%;
-    object-fit: cover;
-    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
-    border: 5px solid #e9f0f5;
+.about-content-center {
+    max-width: 900px;
+    margin: 0 auto;
 }
 
 .about-text {
-    flex: 1;
+    text-align: center;
 }
 
 .about-text p {
@@ -698,11 +756,15 @@ section {
     font-size: 1.1rem;
     line-height: 1.9;
     color: #555;
-    padding: 20px;
+    padding: 25px;
     background: linear-gradient(135deg, rgba(78, 137, 174, 0.05) 0%, rgba(58, 109, 140, 0.05) 100%);
     border-left: 4px solid #4e89ae;
     border-radius: 8px;
     margin-top: 25px;
+    text-align: left;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 /* Dark theme for about focus */
@@ -1900,21 +1962,23 @@ section {
 .career-focus {
     margin-top: 40px;
     padding: 40px;
-    background: linear-gradient(135deg, #4e89ae 0%, #3a6d8c 100%);
+    background: linear-gradient(135deg, #f8f9fa 0%, #e9f0f5 100%);
     border-radius: 15px;
     text-align: center;
-    color: white;
+    color: #333;
+    border: 2px solid rgba(78, 137, 174, 0.1);
 }
 
 .career-focus h3 {
     font-size: 1.8rem;
     margin-bottom: 15px;
+    color: #2c3e50;
 }
 
 .career-focus > p {
     font-size: 1.1rem;
     margin-bottom: 30px;
-    opacity: 0.95;
+    color: #555;
 }
 
 .focus-areas {
@@ -1931,28 +1995,69 @@ section {
     align-items: center;
     gap: 10px;
     padding: 25px 20px;
-    background: rgba(255, 255, 255, 0.1);
+    background: white;
+    border: 2px solid rgba(78, 137, 174, 0.2);
     border-radius: 12px;
-    backdrop-filter: blur(10px);
     transition: all 0.3s ease;
 }
 
 .focus-item:hover {
-    background: rgba(255, 255, 255, 0.2);
+    background: linear-gradient(135deg, #4e89ae 0%, #3a6d8c 100%);
+    border-color: #4e89ae;
     transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(78, 137, 174, 0.3);
 }
 
 .focus-item i {
     font-size: 2.5rem;
-    color: white;
+    color: #4e89ae;
+    transition: all 0.3s ease;
 }
 
 .focus-item span {
     font-size: 1rem;
+    color: #333;
     font-weight: 500;
+    transition: all 0.3s ease;
 }
 
-/* Dark theme adjustments */
+.focus-item:hover i,
+.focus-item:hover span {
+    color: white;
+}
+
+/* Dark Theme Career Focus */
+.dark-theme .career-focus {
+    background: linear-gradient(135deg, #1e1e1e 0%, #2a2a2a 100%);
+    border-color: rgba(107, 159, 211, 0.2);
+    color: #e0e0e0;
+}
+
+.dark-theme .career-focus h3 {
+    color: #e0e0e0;
+}
+
+.dark-theme .career-focus > p {
+    color: #cccccc;
+}
+
+.dark-theme .focus-item {
+    background: #2a2a2a;
+    border-color: rgba(107, 159, 211, 0.3);
+}
+
+.dark-theme .focus-item:hover {
+    background: linear-gradient(135deg, #6b9fd3 0%, #4e89ae 100%);
+    border-color: #6b9fd3;
+}
+
+.dark-theme .focus-item i {
+    color: #6b9fd3;
+}
+
+.dark-theme .focus-item span {
+    color: #e0e0e0;
+}
 .dark-theme .timeline-list li {
     color: #cccccc;
 }
@@ -2133,36 +2238,51 @@ section {
 }
 
 @media (max-width: 768px) {
+    body {
+        padding-top: 70px;
+    }
+
     .hero {
         flex-direction: column;
         text-align: center;
-        padding-top: 100px;
+        padding-top: 50px;
         padding-left: 5%;
         padding-right: 5%;
+        min-height: calc(100vh - 70px);
     }
-    
+
     .hero-content {
         padding-right: 0;
         margin-bottom: 50px;
     }
-    
+
     .hero h1 {
         font-size: 2.8rem;
     }
-    
+
     .hero h2 {
         font-size: 1.5rem;
     }
-    
+
     .hero-btns {
         justify-content: center;
         flex-wrap: wrap;
     }
-    
+
     .hero-focus {
         justify-content: center;
     }
-    
+
+    .hero-social {
+        justify-content: center;
+    }
+
+    .social-link {
+        width: 40px;
+        height: 40px;
+        font-size: 1.2rem;
+    }
+
     .focus-badge {
         font-size: 0.8rem;
         padding: 6px 14px;
@@ -2184,16 +2304,35 @@ section {
         transition: 0.3s;
         box-shadow: 0 10px 27px rgba(0,0,0,0.05);
         padding: 20px 0;
+        z-index: 999;
     }
-    
+
+    .dark-theme .nav-menu {
+        background-color: #1e1e1e;
+    }
+
     .nav-menu.active {
         left: 0;
     }
-    
+
     .nav-menu li {
         margin: 15px 0;
     }
-    
+
+    .nav-left {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .nav-right {
+        position: absolute;
+        right: 20px;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+
     .hamburger {
         display: flex;
     }
@@ -2277,28 +2416,135 @@ section {
     .growth-item {
         padding: 12px 15px;
     }
-    
+
     .career-focus {
         padding: 20px 15px;
     }
-    
+
     .focus-areas {
         grid-template-columns: 1fr;
     }
-    
+
     .focus-item {
         flex-direction: row;
         justify-content: flex-start;
         padding: 15px;
     }
-    
+
     .focus-item i {
         font-size: 1.8rem;
         flex-shrink: 0;
     }
-    
+
     .focus-item span {
         font-size: 0.9rem;
         text-align: left;
+    }
+}
+
+/* ========================================
+   Email Authentication & Modal Styles
+   ======================================== */
+
+/* Contact Form Styles */
+.contact-intro {
+    text-align: center;
+    color: #555;
+    margin-bottom: 30px;
+    font-size: 1.1rem;
+    line-height: 1.7;
+}
+
+.dark-theme .contact-intro {
+    color: #cccccc;
+}
+
+.contact-note {
+    text-align: center;
+    color: #888;
+    font-size: 0.9rem;
+    margin-top: 20px;
+    padding-top: 20px;
+    border-top: 1px solid #e0e0e0;
+}
+
+.dark-theme .contact-note {
+    color: #666;
+    border-top-color: #333;
+}
+
+.contact-note i {
+    color: #4e89ae;
+    margin-right: 5px;
+}
+
+.contact-form label {
+    display: block;
+    margin-bottom: 8px;
+    color: #333;
+    font-weight: 500;
+    font-size: 0.95rem;
+}
+
+.dark-theme .contact-form label {
+    color: #e0e0e0;
+}
+
+.contact-form label i {
+    color: #4e89ae;
+    margin-right: 8px;
+    width: 16px;
+}
+
+/* Success message styling */
+.form-message.success {
+    background: linear-gradient(135deg, rgba(76, 175, 80, 0.1) 0%, rgba(56, 142, 60, 0.1) 100%);
+    border: 2px solid rgba(76, 175, 80, 0.3);
+    color: #2e7d32;
+    padding: 15px;
+    border-radius: 10px;
+    margin-top: 15px;
+    text-align: center;
+}
+
+.dark-theme .form-message.success {
+    background: linear-gradient(135deg, rgba(76, 175, 80, 0.15) 0%, rgba(56, 142, 60, 0.15) 100%);
+    border-color: rgba(76, 175, 80, 0.4);
+    color: #81c784;
+}
+
+/* Error message styling */
+.form-message.error {
+    background: linear-gradient(135deg, rgba(244, 67, 54, 0.1) 0%, rgba(229, 57, 53, 0.1) 100%);
+    border: 2px solid rgba(244, 67, 54, 0.3);
+    color: #c62828;
+    padding: 15px;
+    border-radius: 10px;
+    margin-top: 15px;
+    text-align: center;
+}
+
+.dark-theme .form-message.error {
+    background: linear-gradient(135deg, rgba(244, 67, 54, 0.15) 0%, rgba(229, 57, 53, 0.15) 100%);
+    border-color: rgba(244, 67, 54, 0.4);
+    color: #ef5350;
+}
+
+/* Responsive modal */
+@media (max-width: 480px) {
+    .modal-content {
+        width: 95%;
+    }
+
+    .modal-header {
+        padding: 20px;
+    }
+
+    .modal-body {
+        padding: 20px;
+    }
+
+    .verify-actions {
+        flex-direction: column;
     }
 }

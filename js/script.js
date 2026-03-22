@@ -157,149 +157,6 @@ window.addEventListener('load', animateSkillBars);
 // Run animation when scrolling
 window.addEventListener('scroll', animateSkillBars);
 
-// Enhanced form validation and submission
-const contactForm = document.getElementById('contactForm');
-const submitBtn = document.getElementById('submitBtn');
-const formMessage = document.getElementById('formMessage');
-
-const showError = (elementId, message) => {
-    const errorElement = document.getElementById(elementId);
-    errorElement.textContent = message;
-    errorElement.classList.add('show');
-};
-
-const hideError = (elementId) => {
-    const errorElement = document.getElementById(elementId);
-    errorElement.classList.remove('show');
-};
-
-const validateEmail = (email) => {
-    const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    return re.test(email);
-};
-
-const validateForm = () => {
-    let isValid = true;
-
-    const name = document.getElementById('name').value.trim();
-    const email = document.getElementById('email').value.trim();
-    const subject = document.getElementById('subject').value.trim();
-    const message = document.getElementById('message').value.trim();
-
-    // Name validation
-    if (name === '') {
-        showError('name-error', 'Name is required');
-        isValid = false;
-    } else if (name.length < 2) {
-        showError('name-error', 'Name must be at least 2 characters');
-        isValid = false;
-    } else {
-        hideError('name-error');
-    }
-
-    // Email validation
-    if (email === '') {
-        showError('email-error', 'Email is required');
-        isValid = false;
-    } else if (!validateEmail(email)) {
-        showError('email-error', 'Please enter a valid email address');
-        isValid = false;
-    } else {
-        hideError('email-error');
-    }
-
-    // Subject validation
-    if (subject === '') {
-        showError('subject-error', 'Subject is required');
-        isValid = false;
-    } else if (subject.length < 5) {
-        showError('subject-error', 'Subject must be at least 5 characters');
-        isValid = false;
-    } else {
-        hideError('subject-error');
-    }
-
-    // Message validation
-    if (message === '') {
-        showError('message-error', 'Message is required');
-        isValid = false;
-    } else if (message.length < 10) {
-        showError('message-error', 'Message must be at least 10 characters');
-        isValid = false;
-    } else {
-        hideError('message-error');
-    }
-
-    return isValid;
-};
-
-contactForm.addEventListener('submit', async function(e) {
-    e.preventDefault();
-
-    if (!validateForm()) {
-        return;
-    }
-
-    // Show loading state
-    const btnText = submitBtn.querySelector('.btn-text');
-    const btnLoading = submitBtn.querySelector('.btn-loading');
-    btnText.style.display = 'none';
-    btnLoading.style.display = 'flex';
-    submitBtn.disabled = true;
-
-    // Simulate form submission (since it's not connected to backend)
-    setTimeout(() => {
-        // Hide loading state
-        btnText.style.display = 'inline';
-        btnLoading.style.display = 'none';
-        submitBtn.disabled = false;
-
-        // Show success message
-        formMessage.textContent = 'Thank you for your message! I\'ll get back to you soon.';
-        formMessage.className = 'form-message success';
-        formMessage.style.display = 'block';
-
-        // Reset form
-        contactForm.reset();
-
-        // Hide message after 5 seconds
-        setTimeout(() => {
-            formMessage.style.display = 'none';
-        }, 5000);
-    }, 2000);
-});
-
-// Real-time validation
-document.getElementById('name').addEventListener('input', () => {
-    const name = document.getElementById('name').value.trim();
-    if (name !== '' && name.length >= 2) {
-        hideError('name-error');
-    }
-});
-
-document.getElementById('email').addEventListener('input', () => {
-    const email = document.getElementById('email').value.trim();
-    if (email !== '' && validateEmail(email)) {
-        hideError('email-error');
-    }
-});
-
-document.getElementById('subject').addEventListener('input', () => {
-    const subject = document.getElementById('subject').value.trim();
-    if (subject !== '' && subject.length >= 5) {
-        hideError('subject-error');
-    }
-});
-
-document.getElementById('message').addEventListener('input', () => {
-    const message = document.getElementById('message').value.trim();
-    if (message !== '' && message.length >= 10) {
-        hideError('message-error');
-    }
-});
-
-// Old form submission handling removed - replaced with enhanced version above
-
 // Add scroll effect to navbar
 window.addEventListener('scroll', () => {
     const navbar = document.querySelector('.navbar');
@@ -374,7 +231,7 @@ document.querySelectorAll('.btn').forEach(button => {
 });
 
 // Dark/Light Theme Toggle
-const themeToggle = document.querySelector('.theme-toggle');
+const themeToggle = document.getElementById('themeToggle');
 const themeIcon = document.getElementById('theme-icon');
 const body = document.body;
 
@@ -398,27 +255,33 @@ if (currentTheme === 'dark') {
     themeIcon.classList.add('fa-sun');
 }
 
-// Toggle theme function
-function toggleTheme() {
+// Toggle theme function - exposed to global scope
+window.toggleTheme = function() {
+    console.log('Theme toggle clicked!');
     if (body.classList.contains('dark-theme')) {
         body.classList.remove('dark-theme');
         themeIcon.classList.remove('fa-sun');
         themeIcon.classList.add('fa-moon');
         currentTheme = 'light';
+        console.log('Switched to LIGHT theme');
     } else {
         body.classList.add('dark-theme');
         themeIcon.classList.remove('fa-moon');
         themeIcon.classList.add('fa-sun');
         currentTheme = 'dark';
+        console.log('Switched to DARK theme');
     }
-    
+
     // Save theme preference
     localStorage.setItem('theme', currentTheme);
-}
+};
 
 // Add event listener to theme toggle
 if (themeToggle) {
-    themeToggle.addEventListener('click', toggleTheme);
+    themeToggle.addEventListener('click', window.toggleTheme);
+    console.log('Theme toggle event listener attached');
+} else {
+    console.error('Theme toggle element not found!');
 }
 
 // Listen for OS preference changes
@@ -742,3 +605,129 @@ document.getElementById('fullGalleryModal')?.addEventListener('click', (e) => {
         closeFullGallery();
     }
 });
+
+// ========================================
+// Contact Form with FormSubmit.co (100% Free)
+// ========================================
+
+const contactForm = document.getElementById('contactForm');
+const submitBtn = document.getElementById('submitBtn');
+const formMessage = document.getElementById('formMessage');
+
+const validateEmail = (email) => {
+    const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    return re.test(email);
+};
+
+const validateForm = () => {
+    let isValid = true;
+    const name = document.getElementById('name').value.trim();
+    const email = document.getElementById('email').value.trim();
+    const subject = document.getElementById('subject').value.trim();
+    const message = document.getElementById('message').value.trim();
+
+    document.querySelectorAll('.error-message').forEach(el => {
+        el.textContent = '';
+        el.classList.remove('show');
+    });
+
+    if (name === '') {
+        document.getElementById('name-error').textContent = 'Name is required';
+        document.getElementById('name-error').classList.add('show');
+        isValid = false;
+    } else if (name.length < 2) {
+        document.getElementById('name-error').textContent = 'Name must be at least 2 characters';
+        document.getElementById('name-error').classList.add('show');
+        isValid = false;
+    }
+
+    if (email === '') {
+        document.getElementById('email-error').textContent = 'Email is required';
+        document.getElementById('email-error').classList.add('show');
+        isValid = false;
+    } else if (!validateEmail(email)) {
+        document.getElementById('email-error').textContent = 'Please enter a valid email address';
+        document.getElementById('email-error').classList.add('show');
+        isValid = false;
+    }
+
+    if (subject === '') {
+        document.getElementById('subject-error').textContent = 'Subject is required';
+        document.getElementById('subject-error').classList.add('show');
+        isValid = false;
+    } else if (subject.length < 5) {
+        document.getElementById('subject-error').textContent = 'Subject must be at least 5 characters';
+        document.getElementById('subject-error').classList.add('show');
+        isValid = false;
+    }
+
+    if (message === '') {
+        document.getElementById('message-error').textContent = 'Message is required';
+        document.getElementById('message-error').classList.add('show');
+        isValid = false;
+    } else if (message.length < 10) {
+        document.getElementById('message-error').textContent = 'Message must be at least 10 characters';
+        document.getElementById('message-error').classList.add('show');
+        isValid = false;
+    }
+
+    return isValid;
+};
+
+if (contactForm) {
+    contactForm.addEventListener('submit', async function(e) {
+        e.preventDefault();
+
+        if (!validateForm()) return;
+
+        const btnText = submitBtn.querySelector('.btn-text');
+        const btnLoading = submitBtn.querySelector('.btn-loading');
+        btnText.style.display = 'none';
+        btnLoading.style.display = 'flex';
+        submitBtn.disabled = true;
+
+        try {
+            const formData = new FormData(contactForm);
+            
+            const response = await fetch(contactForm.action, {
+                method: 'POST',
+                body: formData,
+                headers: {
+                    'Accept': 'application/json'
+                }
+            });
+
+            const result = await response.json();
+
+            if (result.success || result.message?.includes('sent')) {
+                formMessage.textContent = '✓ Message sent successfully! I will get back to you soon.';
+                formMessage.className = 'form-message success';
+                formMessage.style.display = 'block';
+                contactForm.reset();
+                setTimeout(() => { formMessage.style.display = 'none'; }, 5000);
+            } else {
+                throw new Error(result.message || 'Failed to send');
+            }
+
+        } catch (error) {
+            console.error('Error:', error);
+            formMessage.textContent = '✗ Failed to send. Email me: dalemasan10@gmail.com';
+            formMessage.className = 'form-message error';
+            formMessage.style.display = 'block';
+        } finally {
+            btnText.style.display = 'inline';
+            btnLoading.style.display = 'none';
+            submitBtn.disabled = false;
+        }
+    });
+
+    ['name', 'email', 'subject', 'message'].forEach(field => {
+        document.getElementById(field).addEventListener('input', () => {
+            const errorEl = document.getElementById(`${field}-error`);
+            if (errorEl.classList.contains('show')) {
+                errorEl.classList.remove('show');
+                errorEl.textContent = '';
+            }
+        });
+    });
+}
