@@ -455,6 +455,92 @@ const projectGalleries = {
             'Status Sewa'
         ],
         github: 'https://github.com/Daalleee/project-rental-motor.git'
+    },
+    'powerbi-chocolate': {
+        title: 'Chocolate Sales Analysis - Power BI Dashboard',
+        images: [
+            'images/powerbi-chocolate/dashboard-overview.png',
+            'images/powerbi-chocolate/sales-by-country.png',
+            'images/powerbi-chocolate/salesperson-performance.png',
+            'images/powerbi-chocolate/top-products.png',
+            'images/powerbi-chocolate/monthly-trends.png',
+            'images/powerbi-chocolate/order-status-distribution.png'
+        ],
+        captions: [
+            'Dashboard Overview',
+            'Revenue by Country',
+            'Salesperson Performance',
+            'Top Products',
+            'Monthly Sales Trends',
+            'Order Status Distribution'
+        ],
+        github: '#'
+    },
+    'powerbi-customer': {
+        title: 'Customer Analytics - Power BI Dashboard',
+        images: [
+            'images/powerbi-customer/customer-overview.png',
+            'images/powerbi-customer/customer-segmentation.png',
+            'images/powerbi-customer/customer-behavior.png',
+            'images/powerbi-customer/customer-retention.png'
+        ],
+        captions: [
+            'Customer Overview Dashboard',
+            'Customer Segmentation Analysis',
+            'Customer Behavior Patterns',
+            'Customer Retention Metrics'
+        ],
+        github: '#'
+    },
+    'powerbi-financial': {
+        title: 'Financial Analytics - Power BI Dashboard',
+        images: [
+            'images/powerbi-financial/financial-overview.png',
+            'images/powerbi-financial/revenue-analysis.png',
+            'images/powerbi-financial/expense-tracking.png',
+            'images/powerbi-financial/profit-margins.png',
+            'images/powerbi-financial/cash-flow.png'
+        ],
+        captions: [
+            'Financial Overview',
+            'Revenue Analysis',
+            'Expense Tracking',
+            'Profit Margins',
+            'Cash Flow Analysis'
+        ],
+        github: '#'
+    },
+    'powerbi-supply': {
+        title: 'Supply Chain Analytics - Power BI Dashboard',
+        images: [
+            'images/powerbi-supply/supply-overview.png',
+            'images/powerbi-supply/inventory-levels.png',
+            'images/powerbi-supply/supplier-performance.png',
+            'images/powerbi-supply/delivery-tracking.png'
+        ],
+        captions: [
+            'Supply Chain Overview',
+            'Inventory Levels',
+            'Supplier Performance',
+            'Delivery Tracking'
+        ],
+        github: '#'
+    },
+    'powerbi-hr': {
+        title: 'HR Analytics - Power BI Dashboard',
+        images: [
+            'images/powerbi-hr/hr-overview.png',
+            'images/powerbi-hr/employee-attrition.png',
+            'images/powerbi-hr/recruitment-metrics.png',
+            'images/powerbi-hr/performance-review.png'
+        ],
+        captions: [
+            'HR Overview Dashboard',
+            'Employee Attrition Analysis',
+            'Recruitment Metrics',
+            'Performance Review'
+        ],
+        github: '#'
     }
 };
 

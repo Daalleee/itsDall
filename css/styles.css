@@ -962,6 +962,166 @@ section {
     background-color: #fff;
 }
 
+.projects-ml {
+    background-color: #f8f9fa;
+    padding: 80px 0;
+}
+
+/* Empty Category State */
+.empty-category {
+    text-align: center;
+    padding: 60px 20px;
+    background: linear-gradient(135deg, #fff 0%, #f8f9fa 100%);
+    border-radius: 15px;
+    border: 2px dashed #4e89ae;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.empty-category-icon {
+    width: 100px;
+    height: 100px;
+    margin: 0 auto 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, rgba(78, 137, 174, 0.1) 0%, rgba(58, 109, 140, 0.1) 100%);
+    border-radius: 50%;
+}
+
+.empty-category-icon i {
+    font-size: 3rem;
+    color: #4e89ae;
+}
+
+.empty-category h4 {
+    font-size: 1.8rem;
+    color: #2c3e50;
+    margin-bottom: 15px;
+    font-weight: 700;
+}
+
+.empty-category p {
+    font-size: 1rem;
+    color: #666;
+    margin-bottom: 10px;
+    line-height: 1.6;
+}
+
+.empty-category-note {
+    font-weight: 600;
+    color: #4e89ae;
+    margin-top: 20px;
+    margin-bottom: 15px;
+}
+
+.empty-category-list {
+    list-style: none;
+    padding: 0;
+    margin: 20px auto 0;
+    max-width: 400px;
+    text-align: left;
+}
+
+.empty-category-list li {
+    padding: 10px 15px;
+    margin-bottom: 8px;
+    background: linear-gradient(135deg, rgba(78, 137, 174, 0.05) 0%, rgba(58, 109, 140, 0.05) 100%);
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    color: #555;
+    font-size: 0.95rem;
+}
+
+.empty-category-list li i {
+    color: #4e89ae;
+    font-size: 0.9rem;
+}
+
+/* Dark theme for empty category */
+.dark-theme .projects-ml {
+    background-color: #1a1a1a;
+}
+
+.dark-theme .empty-category {
+    background: linear-gradient(135deg, #2a2a2a 0%, #1e1e1e 100%);
+    border-color: #6b9fd3;
+}
+
+.dark-theme .empty-category h4 {
+    color: #e0e0e0;
+}
+
+.dark-theme .empty-category p {
+    color: #cccccc;
+}
+
+.dark-theme .empty-category-note {
+    color: #6b9fd3;
+}
+
+.dark-theme .empty-category-list li {
+    background: linear-gradient(135deg, rgba(107, 159, 211, 0.1) 0%, rgba(78, 137, 174, 0.1) 100%);
+    color: #cccccc;
+}
+
+.dark-theme .empty-category-list li i {
+    color: #6b9fd3;
+}
+
+/* Project Category Titles */
+.project-category {
+    margin-bottom: 60px;
+}
+
+.project-category:last-child {
+    margin-bottom: 0;
+}
+
+.category-title {
+    font-size: 1.5rem;
+    color: #2c3e50;
+    margin-bottom: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    position: relative;
+    padding-bottom: 15px;
+    text-align: center;
+}
+
+.category-title i {
+    color: #4e89ae;
+    font-size: 2.2rem;
+}
+
+.category-title::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 4px;
+    background: linear-gradient(90deg, #4e89ae 0%, #3a6d8c 100%);
+    border-radius: 2px;
+}
+
+.dark-theme .category-title {
+    color: #e0e0e0;
+}
+
+.dark-theme .category-title i {
+    color: #6b9fd3;
+}
+
+.dark-theme .category-title::after {
+    background: linear-gradient(90deg, #6b9fd3 0%, #4e89ae 100%);
+}
+
 .projects-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
@@ -1795,15 +1955,12 @@ section {
     position: relative;
 }
 
-.timeline-item:nth-child(even) .timeline-content {
-    flex-direction: row-reverse;
-    text-align: right;
-}
-
 .timeline-content {
     display: flex;
+    flex-direction: column;
     align-items: center;
-    gap: 30px;
+    text-align: center;
+    gap: 20px;
 }
 
 .timeline-icon {
@@ -1827,7 +1984,8 @@ section {
     padding: 25px;
     border-radius: 10px;
     box-shadow: 0 5px 15px rgba(0,0,0,0.05);
-    flex: 1;
+    max-width: 600px;
+    width: 100%;
     transition: transform 0.3s ease;
 }
 
@@ -1839,6 +1997,7 @@ section {
     color: #2c3e50;
     margin-bottom: 5px;
     font-size: 1.3rem;
+    text-align: center;
 }
 
 .timeline-date {
@@ -1846,35 +2005,46 @@ section {
     font-weight: 600;
     font-size: 0.9rem;
     margin-bottom: 10px;
+    display: block;
+    text-align: center;
 }
 
 .timeline-text p {
     color: #666;
     line-height: 1.6;
     margin: 0;
+    text-align: center;
 }
 
 /* Timeline List */
 .timeline-list {
     list-style: none;
-    padding: 10px 0 10px 20px;
-    margin: 10px 0;
+    padding: 10px 0;
+    margin: 10px auto;
+    text-align: center;
 }
 
 .timeline-list li {
     position: relative;
-    padding-left: 15px;
+    padding-left: 25px;
     color: #555;
     margin-bottom: 8px;
     line-height: 1.5;
+    display: block;
+    text-align: left;
+    max-width: fit-content;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .timeline-list li::before {
-    content: '▸';
+    content: '•';
     position: absolute;
-    left: 0;
+    left: 5px;
     color: #4e89ae;
     font-weight: bold;
+    font-size: 1.2rem;
+    line-height: 1.5;
 }
 
 .timeline-note {
@@ -1884,6 +2054,7 @@ section {
     margin-top: 10px;
     padding-top: 10px;
     border-top: 1px dashed #ddd;
+    text-align: center;
 }
 
 .timeline-intro {
