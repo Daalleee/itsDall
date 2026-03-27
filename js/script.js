@@ -459,20 +459,19 @@ const projectGalleries = {
     'powerbi-chocolate': {
         title: 'Chocolate Sales Analysis - Power BI Dashboard',
         images: [
-            'images/powerbi-chocolate/dashboard-overview.png',
-            'images/powerbi-chocolate/sales-by-country.png',
-            'images/powerbi-chocolate/salesperson-performance.png',
-            'images/powerbi-chocolate/top-products.png',
-            'images/powerbi-chocolate/monthly-trends.png',
-            'images/powerbi-chocolate/order-status-distribution.png'
+            'project/project5/Cuplikan layar 2026-03-27 150607.png',
+            'project/project5/Cuplikan layar 2026-03-27 150633.png',
+            'project/project5/Cuplikan layar 2026-03-27 150651.png',
+            'project/project5/Cuplikan layar 2026-03-27 150710.png',
+            'project/project5/Cuplikan layar 2026-03-27 152425.png'
+            
         ],
         captions: [
             'Dashboard Overview',
-            'Revenue by Country',
-            'Salesperson Performance',
-            'Top Products',
-            'Monthly Sales Trends',
-            'Order Status Distribution'
+            'Executive Summary',
+            'Analysis Geo',
+            'Analysis Product',
+            'Performance Team'
         ],
         github: '#'
     },
