@@ -491,18 +491,17 @@ const projectGalleries = {
     'powerbi-financial': {
         title: 'Financial Analytics - Power BI Dashboard',
         images: [
-            'images/powerbi-financial/financial-overview.png',
-            'images/powerbi-financial/revenue-analysis.png',
-            'images/powerbi-financial/expense-tracking.png',
-            'images/powerbi-financial/profit-margins.png',
-            'images/powerbi-financial/cash-flow.png'
+            'project/project7/Cuplikan layar 2026-03-29 030346.png',
+            'project/project7/Cuplikan layar 2026-03-29 030402.png',
+            'project/project7/Cuplikan layar 2026-03-29 030414.png',
+            'project/project7/Cuplikan layar 2026-03-29 030424.png'
+        
         ],
         captions: [
-            'Financial Overview',
-            'Revenue Analysis',
-            'Expense Tracking',
-            'Profit Margins',
-            'Cash Flow Analysis'
+            'Dashboard Overview',
+            'Summary page',
+            'Job Rule',
+            'Education'
         ],
         github: '#'
     },
