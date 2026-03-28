@@ -478,10 +478,7 @@ const projectGalleries = {
     'powerbi-customer': {
         title: 'Customer Analytics - Power BI Dashboard',
         images: [
-            'images/powerbi-customer/customer-overview.png',
-            'images/powerbi-customer/customer-segmentation.png',
-            'images/powerbi-customer/customer-behavior.png',
-            'images/powerbi-customer/customer-retention.png'
+            'project/project6/image.png'
         ],
         captions: [
             'Customer Overview Dashboard',
