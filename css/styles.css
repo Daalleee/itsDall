@@ -176,10 +176,15 @@ body {
   background: linear-gradient(135deg, #333 0%, #000 100%);
   border: none;
   border-radius: 10px;
-  padding: 12px 15px;
+  width: 50px;
+  height: 50px;
+  padding: 0;
   cursor: pointer;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
   transition: all 0.3s ease;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
 }
 
 .mobile-toggle:hover {
@@ -1297,12 +1302,17 @@ section {
   padding: 15px 30px;
   background: rgba(30, 30, 30, 0.9);
   border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  flex-shrink: 0;
 }
 
 .full-gallery-header h3 {
   color: white;
   font-size: 1.5rem;
   margin: 0;
+  max-width: 70%;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .gallery-close-btn {
@@ -1318,6 +1328,7 @@ section {
   align-items: center;
   justify-content: center;
   transition: all 0.3s ease;
+  flex-shrink: 0;
 }
 
 .gallery-close-btn:hover {
@@ -1333,6 +1344,7 @@ section {
   gap: 20px;
   padding: 20px;
   position: relative;
+  overflow: hidden;
 }
 
 .full-gallery-image-container {
@@ -1341,11 +1353,12 @@ section {
   justify-content: center;
   align-items: center;
   padding: 20px;
+  max-height: calc(100vh - 180px);
 }
 
 .full-gallery-image-container img {
   max-width: 100%;
-  max-height: 85vh;
+  max-height: calc(100vh - 180px);
   width: auto;
   height: auto;
   object-fit: contain;
@@ -1440,18 +1453,83 @@ section {
     font-size: 1.3rem;
   }
 
+  .full-gallery-modal {
+    background: rgba(0, 0, 0, 0.98);
+  }
+
+  .full-gallery-header {
+    padding: 10px 20px;
+  }
+
+  .full-gallery-header h3 {
+    font-size: 1rem;
+  }
+
+  .full-gallery-content {
+    flex-direction: row;
+    padding: 10px;
+    gap: 10px;
+  }
+
   .full-gallery-image-container {
     flex: 1;
-    max-height: 70vh;
+    width: 100%;
+    max-width: 100%;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .full-gallery-image-container img {
+    width: 100%;
+    height: auto;
+    max-height: 65vh;
+    object-fit: contain;
+  }
+
+  .full-gallery-nav {
+    width: 45px;
+    height: 45px;
+    font-size: 1.5rem;
+    position: absolute;
+    top: 50%;
+    background: rgba(0, 0, 0, 0.6);
+    color: white;
+    border: 2px solid rgba(0, 0, 0, 0.8);
+  }
+
+  .full-gallery-nav.prev {
+    left: 10px;
+  }
+
+  .full-gallery-nav.next {
+    right: 10px;
+  }
+
+  .full-gallery-nav:hover {
+    background: rgba(0, 0, 0, 0.8);
+    border-color: #000;
   }
 
   .full-gallery-footer {
-    padding: 15px 20px;
+    padding: 10px 20px;
   }
 
   .full-gallery-controls {
-    flex-direction: column;
-    gap: 15px;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+  }
+
+  .full-gallery-dots {
+    gap: 8px;
+  }
+
+  .full-gallery-dots .dot {
+    width: 10px;
+    height: 10px;
   }
 
   /* About Focus Responsive */
@@ -1464,29 +1542,29 @@ section {
   }
 
   .focus-grid {
-    grid-template-columns: 1fr;
-    gap: 20px;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
   }
 
   .focus-card {
-    padding: 25px 20px;
+    padding: 20px 15px;
   }
 
   .focus-card-icon {
-    width: 70px;
-    height: 70px;
+    width: 60px;
+    height: 60px;
   }
 
   .focus-card-icon i {
-    font-size: 1.8rem;
+    font-size: 1.5rem;
   }
 
   .focus-card h4 {
-    font-size: 1.2rem;
+    font-size: 0.95rem;
   }
 
   .focus-card p {
-    font-size: 0.9rem;
+    font-size: 0.8rem;
   }
 
   /* Skills Responsive */
@@ -1759,6 +1837,8 @@ section {
   align-items: center;
   text-align: center;
   gap: 20px;
+  position: relative;
+  z-index: 1;
 }
 
 .timeline-icon {
@@ -2107,27 +2187,74 @@ section {
   .contact-container {
     grid-template-columns: 1fr;
   }
-
-  .timeline::before {
-    left: 30px;
-  }
-
-  .timeline-content {
-    flex-direction: column !important;
-    text-align: left !important;
-    gap: 15px;
-  }
-
-  .timeline-icon {
-    align-self: flex-start;
-    margin-left: 0;
-  }
 }
 
 @media (max-width: 768px) {
   body {
     padding-left: 0;
     padding-top: 70px;
+  }
+
+  .container {
+    padding: 0 15px !important;
+  }
+
+  .experience .container {
+    padding: 0 !important;
+    margin: 0 !important;
+    width: 100% !important;
+    max-width: none !important;
+  }
+
+  section {
+    padding: 60px 0;
+  }
+
+  .experience {
+    padding: 60px 0 !important;
+  }
+
+  .timeline {
+    max-width: 100% !important;
+    width: 100% !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    position: relative;
+  }
+
+  .timeline::before {
+    left: 50% !important;
+    transform: translateX(-50%) !important;
+    z-index: 0;
+  }
+
+  .timeline-item {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    margin-bottom: 40px;
+    width: 100% !important;
+  }
+
+  .timeline-content {
+    width: 100% !important;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    text-align: center !important;
+    gap: 15px;
+    position: relative;
+    z-index: 1;
+  }
+
+  .timeline-icon {
+    position: relative;
+    z-index: 2;
+  }
+
+  .timeline-text {
+    width: 100% !important;
+    max-width: none !important;
   }
 
   .sidebar {
@@ -2139,7 +2266,7 @@ section {
   }
 
   .mobile-toggle {
-    display: block;
+    display: flex;
   }
 
   .mobile-toggle.active .bar:nth-child(1) {
@@ -2207,6 +2334,16 @@ section {
 
   .projects-grid {
     grid-template-columns: 1fr;
+    gap: 25px;
+  }
+
+  .project-gallery {
+    min-height: 200px;
+    max-height: 400px;
+  }
+
+  .project-screenshot {
+    max-height: 400px;
   }
 
   .about-profile-image {
@@ -2215,7 +2352,8 @@ section {
   }
 
   .section-title {
-    font-size: 2.3rem;
+    font-size: 2rem;
+    margin-bottom: 40px;
   }
 
   .about-stats {
@@ -2233,7 +2371,7 @@ section {
   }
 
   .section-title {
-    font-size: 2rem;
+    font-size: 1.8rem;
   }
 
   .stat {
@@ -2273,6 +2411,20 @@ section {
     padding: 12px 15px;
   }
 
+  /* Focus Grid - Back to 1 column for very small screens */
+  .focus-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .skills-icons {
+    grid-template-columns: repeat(auto-fit, minmax(60px, 1fr));
+  }
+
+  .project-gallery {
+    min-height: 180px;
+    max-height: 350px;
+  }
+
   .career-focus {
     padding: 20px 15px;
   }
@@ -2292,9 +2444,54 @@ section {
     flex-shrink: 0;
   }
 
-  .focus-item span {
-    font-size: 0.9rem;
-    text-align: left;
+  .timeline::before {
+    left: 20px;
+  }
+
+  .timeline-text {
+    padding-left: 50px;
+  }
+
+  .timeline-icon {
+    width: 40px;
+    height: 40px;
+    font-size: 1.2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  section {
+    padding: 40px 15px;
+  }
+
+  .hero {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+
+  .hero h1 {
+    font-size: 1.8rem;
+  }
+
+  .hero h2 {
+    font-size: 1.1rem;
+  }
+
+  .section-title {
+    font-size: 1.6rem;
+    margin-bottom: 30px;
+  }
+
+  .focus-card h4 {
+    font-size: 0.85rem;
+  }
+
+  .focus-card p {
+    font-size: 0.75rem;
+  }
+
+  .project-screenshot {
+    max-height: 300px;
   }
 }
 
