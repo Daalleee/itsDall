@@ -636,7 +636,6 @@ const validateForm = () => {
   let isValid = true;
   const name = document.getElementById("name").value.trim();
   const email = document.getElementById("email").value.trim();
-  const subject = document.getElementById("subject").value.trim();
   const message = document.getElementById("message").value.trim();
 
   document.querySelectorAll(".error-message").forEach((el) => {
@@ -663,18 +662,6 @@ const validateForm = () => {
     document.getElementById("email-error").textContent =
       "Please enter a valid email address";
     document.getElementById("email-error").classList.add("show");
-    isValid = false;
-  }
-
-  if (subject === "") {
-    document.getElementById("subject-error").textContent =
-      "Subject is required";
-    document.getElementById("subject-error").classList.add("show");
-    isValid = false;
-  } else if (subject.length < 5) {
-    document.getElementById("subject-error").textContent =
-      "Subject must be at least 5 characters";
-    document.getElementById("subject-error").classList.add("show");
     isValid = false;
   }
 
@@ -711,14 +698,12 @@ if (contactForm) {
       const response = await fetch(contactForm.action, {
         method: "POST",
         body: formData,
-        headers: {
-          Accept: "application/json",
-        },
       });
 
       const result = await response.json();
+      console.log("Web3Forms Response:", result);
 
-      if (result.success || result.message?.includes("sent")) {
+      if (response.ok || result.success) {
         formMessage.textContent =
           "✓ Message sent successfully! I will get back to you soon.";
         formMessage.className = "form-message success";
@@ -733,7 +718,7 @@ if (contactForm) {
     } catch (error) {
       console.error("Error:", error);
       formMessage.textContent =
-        "✗ Failed to send. Email me: dalemasan10@gmail.com";
+        "✗ Failed to send. Email me directly: dalemasan10@gmail.com";
       formMessage.className = "form-message error";
       formMessage.style.display = "block";
     } finally {
@@ -743,7 +728,7 @@ if (contactForm) {
     }
   });
 
-  ["name", "email", "subject", "message"].forEach((field) => {
+  ["name", "email", "message"].forEach((field) => {
     document.getElementById(field).addEventListener("input", () => {
       const errorEl = document.getElementById(`${field}-error`);
       if (errorEl.classList.contains("show")) {
