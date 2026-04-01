@@ -631,3 +631,68 @@ if (contactForm) {
     });
   });
 }
+
+// Scroll to Top Button
+const scrollToTopBtn = document.getElementById("scrollToTop");
+
+window.addEventListener("scroll", () => {
+  if (window.scrollY > 500) {
+    scrollToTopBtn.classList.add("show");
+  } else {
+    scrollToTopBtn.classList.remove("show");
+  }
+});
+
+scrollToTopBtn.addEventListener("click", () => {
+  window.scrollTo({
+    top: 0,
+    behavior: "smooth",
+  });
+});
+
+// Download CV Button
+const downloadCVBtn = document.getElementById("downloadCV");
+
+if (downloadCVBtn) {
+  downloadCVBtn.addEventListener("click", (e) => {
+    e.preventDefault();
+    alert("Maaf CV saya belum diupload");
+  });
+}
+
+// Stats Counter Animation
+const stats = document.querySelectorAll(".stat h3");
+let statsAnimated = false;
+
+const animateStats = () => {
+  const statsSection = document.querySelector(".about-stats");
+  if (!statsSection) return;
+
+  const position = statsSection.getBoundingClientRect().top;
+  const screenPosition = window.innerHeight / 1.3;
+
+  if (position < screenPosition && !statsAnimated) {
+    statsAnimated = true;
+
+    stats.forEach((stat) => {
+      const target = +stat.getAttribute("data-target");
+      const increment = target / 50;
+      let count = 0;
+
+      const updateCount = () => {
+        if (count < target) {
+          count += increment;
+          stat.textContent = Math.ceil(count) + "+";
+          setTimeout(updateCount, 40);
+        } else {
+          stat.textContent = target + "+";
+        }
+      };
+
+      updateCount();
+    });
+  }
+};
+
+window.addEventListener("scroll", animateStats);
+animateStats(); // Check on load
