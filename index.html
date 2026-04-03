@@ -1,1256 +1,1539 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Leonardus Dale Masan - Portfolio</title>
-    <link rel="stylesheet" href="css/styles.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
-        rel="stylesheet">
-    <link id="theme-style" rel="stylesheet" href="styles.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-</head>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Leonardus Dale Masan - Portfolio</title>
+        <link rel="stylesheet" href="css/styles.css">
+        <link rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+        <link
+            href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+            rel="stylesheet">
+        <link id="theme-style" rel="stylesheet" href="styles.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    </head>
 
-<body>
-    <!-- Left Sidebar Navigation -->
-    <aside class="sidebar">
-        <div class="sidebar-header">
-            <div class="nav-brand">Portofolio</div>
-        </div>
-        <nav class="sidebar-nav">
-            <ul class="nav-menu">
-                <li><a href="#home"><i class="fas fa-home"></i> Home</a></li>
-                <li><a href="#about"><i class="fas fa-user"></i> About</a></li>
-                <li><a href="#experience"><i class="fas fa-briefcase"></i> Experience</a></li>
-                <li><a href="#skills"><i class="fas fa-chart-bar"></i> Skills</a></li>
-                <li class="has-submenu">
-                    <a href="#projects" class="submenu-toggle"><i class="fas fa-folder-open"></i> Projects <i
-                            class="fas fa-chevron-down submenu-arrow"></i></a>
-                    <ul class="submenu">
-                        <li><a href="#projects-web">Web & Application</a></li>
-                        <li><a href="#projects-data">Data Analysis & BI</a></li>
-                        <li><a href="#projects-ml">Machine Learning</a></li>
-                    </ul>
-                </li>
-                <li><a href="#contact"><i class="fas fa-envelope"></i> Contact</a></li>
-            </ul>
-        </nav>
-        <div class="sidebar-footer">
-            <div class="sidebar-brand">
-                <span>&copy; 2026 Leonardus Dale Masan</span>
+    <body>
+        <!-- Left Sidebar Navigation -->
+        <aside class="sidebar">
+            <div class="sidebar-header">
+                <div class="nav-brand">Portofolio</div>
             </div>
-        </div>
-    </aside>
-
-    <!-- Mobile Toggle Button -->
-    <button class="mobile-toggle" id="mobileToggle">
-        <span class="bar"></span>
-        <span class="bar"></span>
-        <span class="bar"></span>
-    </button>
-
-    <!-- Hero Section -->
-    <section id="home" class="hero">
-        <div class="hero-content">
-            <h1>Hi, I'm <span class="highlight">Leonardus Dale
-                    Masan</span></h1>
-
-            <!-- Social Media Links -->
-            <div class="hero-social">
-                <a href="https://github.com/Daalleee" target="_blank" title="GitHub" class="social-link">
-                    <i class="fab fa-github"></i>
-                </a>
-                <a href="https://www.linkedin.com/in/leonardus-d-masan-56267736a/" target="_blank" title="LinkedIn"
-                    class="social-link">
-                    <i class="fab fa-linkedin-in"></i>
-                </a>
-                <a href="https://www.instagram.com/daalleeeee_/" target="_blank" title="Instagram" class="social-link">
-                    <i class="fab fa-instagram"></i>
-                </a>
+            <nav class="sidebar-nav">
+                <ul class="nav-menu">
+                    <li><a href="#home"><i class="fas fa-home"></i>
+                            Home</a></li>
+                    <li><a href="#about"><i class="fas fa-user"></i>
+                            About</a></li>
+                    <li><a href="#experience"><i class="fas fa-briefcase"></i>
+                            Experience</a></li>
+                    <li><a href="#skills"><i class="fas fa-chart-bar"></i>
+                            Skills</a></li>
+                    <li class="has-submenu">
+                        <a href="#projects" class="submenu-toggle"><i
+                                class="fas fa-folder-open"></i> Projects <i
+                                class="fas fa-chevron-down submenu-arrow"></i></a>
+                        <ul class="submenu">
+                            <li><a href="#projects-web">Web &
+                                    Application</a></li>
+                            <li><a href="#projects-data">Data Analysis &
+                                    BI</a></li>
+                            <li><a href="#projects-ml">Machine Learning</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#contact"><i class="fas fa-envelope"></i>
+                            Contact</a></li>
+                </ul>
+            </nav>
+            <div class="sidebar-footer">
+                <div class="sidebar-brand">
+                    <span>&copy; 2026 Leonardus Dale Masan</span>
+                </div>
             </div>
+        </aside>
 
-            <div class="hero-focus">
-                <span class="focus-badge"><i class="fas fa-chart-bar"></i>
-                    Data Science</span>
-                <span class="focus-badge"><i class="fas fa-table"></i> Data
-                    Analysis</span>
-                <span class="focus-badge"><i class="fas fa-brain"></i>
-                    Machine Learning</span>
-                <span class="focus-badge"><i class="fas fa-code"></i>
-                    Fullstack Development</span>
-            </div>
-            <p>Passionate about leveraging data and technology to solve
-                real-world problems and create innovative solutions.</p>
-            <div class="hero-btns">
-                <a href="#projects" class="btn btn-primary">View My Work</a>
-                <a href="#contact" class="btn btn-secondary">Contact Me</a>
-                <a href="#" class="btn btn-secondary" id="downloadCV">
-                    <i class="fas fa-download"></i> Download CV
-                </a>
-            </div>
-        </div>
-        <div class="hero-image">
-            <div class="profile-container">
-                <img src="images/fotosaya.jpg" alt="Leonardus Dale Masan" class="profile-image" loading="lazy">
-                <div class="profile-overlay"></div>
-            </div>
-        </div>
-    </section>
+        <!-- Mobile Toggle Button -->
+        <button class="mobile-toggle" id="mobileToggle">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </button>
 
-    <!-- About Section -->
-    <section id="about" class="about">
-        <div class="container">
-            <h2 class="section-title">About Me</h2>
-            <div class="about-content-center">
-                <div class="about-text">
-                    <p class="about-intro">I have a deep interest in data
-                        and technology. From a collection of numbers and
-                        information, I can find meaningful insights and
-                        transform them into real solutions that can be used
-                        to solve everyday problems.</p>
+        <!-- Hero Section -->
+        <section id="home" class="hero">
+            <div class="hero-content">
+                <h1>Hi, I'm <span class="highlight">Leonardus Dale
+                        Masan</span></h1>
 
-                    <div class="about-focus">
-                        <h3>My Core Expertise</h3>
-                        <div class="focus-grid">
-                            <div class="focus-card">
-                                <div class="focus-card-icon">
-                                    <i class="fas fa-chart-bar"></i>
+                <!-- Social Media Links -->
+                <div class="hero-social">
+                    <a href="https://github.com/Daalleee" target="_blank"
+                        title="GitHub" class="social-link">
+                        <i class="fab fa-github"></i>
+                    </a>
+                    <a
+                        href="https://www.linkedin.com/in/leonardus-d-masan-56267736a/"
+                        target="_blank" title="LinkedIn"
+                        class="social-link">
+                        <i class="fab fa-linkedin-in"></i>
+                    </a>
+                    <a href="https://www.instagram.com/daalleeeee_/"
+                        target="_blank" title="Instagram" class="social-link">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                </div>
+
+                <div class="hero-focus">
+                    <span class="focus-badge"><i class="fas fa-chart-bar"></i>
+                        Data Science</span>
+                    <span class="focus-badge"><i class="fas fa-table"></i> Data
+                        Analysis</span>
+                    <span class="focus-badge"><i class="fas fa-brain"></i>
+                        Machine Learning</span>
+                    <span class="focus-badge"><i class="fas fa-code"></i>
+                        Fullstack Development</span>
+                </div>
+                <p>Passionate about leveraging data and technology to solve
+                    real-world problems and create innovative solutions.</p>
+                <div class="hero-btns">
+                    <a href="#projects" class="btn btn-primary">View My Work</a>
+                    <a href="#contact" class="btn btn-secondary">Contact Me</a>
+                    <a href="#" class="btn btn-secondary" id="downloadCV">
+                        <i class="fas fa-download"></i> Download CV
+                    </a>
+                </div>
+            </div>
+            <div class="hero-image">
+                <div class="profile-container">
+                    <img src="images/fotosaya.jpg" alt="Leonardus Dale Masan"
+                        class="profile-image" loading="lazy">
+                    <div class="profile-overlay"></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="about">
+            <div class="container">
+                <h2 class="section-title">About Me</h2>
+                <div class="about-content-center">
+                    <div class="about-text">
+                        <p class="about-intro">I have a deep interest in data
+                            and technology. From a collection of numbers and
+                            information, I can find meaningful insights and
+                            transform them into real solutions that can be used
+                            to solve everyday problems.</p>
+
+                        <div class="about-focus">
+                            <h3>My Core Expertise</h3>
+                            <div class="focus-grid">
+                                <div class="focus-card">
+                                    <div class="focus-card-icon">
+                                        <i class="fas fa-chart-bar"></i>
+                                    </div>
+                                    <h4>Data Science</h4>
+                                    <p>Identifying patterns, trends, and key
+                                        insights from complex data.</p>
                                 </div>
-                                <h4>Data Science</h4>
-                                <p>Identifying patterns, trends, and key
-                                    insights from complex data.</p>
-                            </div>
-                            <div class="focus-card">
-                                <div class="focus-card-icon">
-                                    <i class="fas fa-table"></i>
+                                <div class="focus-card">
+                                    <div class="focus-card-icon">
+                                        <i class="fas fa-table"></i>
+                                    </div>
+                                    <h4>Data Analysis</h4>
+                                    <p>Making data-driven decisions through
+                                        visualization and statistical
+                                        analysis.</p>
                                 </div>
-                                <h4>Data Analysis</h4>
-                                <p>Making data-driven decisions through
-                                    visualization and statistical
-                                    analysis.</p>
-                            </div>
-                            <div class="focus-card">
-                                <div class="focus-card-icon">
-                                    <i class="fas fa-brain"></i>
+                                <div class="focus-card">
+                                    <div class="focus-card-icon">
+                                        <i class="fas fa-brain"></i>
+                                    </div>
+                                    <h4>Machine Learning</h4>
+                                    <p>Building predictive and intelligent
+                                        models for real-world challenges.</p>
                                 </div>
-                                <h4>Machine Learning</h4>
-                                <p>Building predictive and intelligent
-                                    models for real-world challenges.</p>
-                            </div>
-                            <div class="focus-card">
-                                <div class="focus-card-icon">
-                                    <i class="fas fa-code"></i>
+                                <div class="focus-card">
+                                    <div class="focus-card-icon">
+                                        <i class="fas fa-code"></i>
+                                    </div>
+                                    <h4>Fullstack Development</h4>
+                                    <p>Creating modern, interactive, and
+                                        efficient web applications.</p>
                                 </div>
-                                <h4>Fullstack Development</h4>
-                                <p>Creating modern, interactive, and
-                                    efficient web applications.</p>
+                            </div>
+                        </div>
+
+                        <p class="about-closing">I see every project as an
+                            opportunity to grow, sharpen my skills, and make a
+                            real impact through technology. I am ready to
+                            contribute, learn, and create innovations that can
+                            be beneficial to many people.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Experience/Timeline Section -->
+        <section id="experience" class="experience">
+            <div class="container">
+                <h2 class="section-title">My Learning Journey</h2>
+                <p class="timeline-intro">I embarked on my Informatics journey
+                    in <strong>August 2023</strong>, starting with foundational
+                    programming knowledge. Through dedication and consistent
+                    practice, I transformed initial challenges into strengths,
+                    developing robust problem-solving skills and technical
+                    expertise.</p>
+
+                <div class="timeline">
+                    <!-- Building Foundations -->
+                    <div class="timeline-item">
+                        <div class="timeline-content">
+                            <div class="timeline-icon">
+                                <i class="fas fa-book"></i>
+                            </div>
+                            <div class="timeline-text">
+                                <h3>Building Foundations</h3>
+                                <span class="timeline-date">2023</span>
+                                <p>Established core fundamentals in computer
+                                    science:</p>
+                                <ul class="timeline-list">
+                                    <li>Algorithms and Programming</li>
+                                    <li>Discrete Mathematics</li>
+                                    <li>Digital Systems</li>
+                                </ul>
+                                <p class="timeline-note">Developed logical
+                                    thinking and mastered programming
+                                    fundamentals through hands-on practice.</p>
                             </div>
                         </div>
                     </div>
 
-                    <p class="about-closing">I see every project as an
-                        opportunity to grow, sharpen my skills, and make a
-                        real impact through technology. I am ready to
-                        contribute, learn, and create innovations that can
-                        be beneficial to many people.</p>
-
-                    <!-- Stats Counter -->
-                    <div class="about-stats">
-                        <div class="stat">
-                            <h3 data-target="10">0</h3>
-                            <p>Projects Completed</p>
-                        </div>
-                        <div class="stat">
-                            <h3 data-target="3">0</h3>
-                            <p>Years Learning</p>
-                        </div>
-                        <div class="stat">
-                            <h3 data-target="5">0</h3>
-                            <p>Technologies</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Experience/Timeline Section -->
-    <section id="experience" class="experience">
-        <div class="container">
-            <h2 class="section-title">My Learning Journey</h2>
-            <p class="timeline-intro">I embarked on my Informatics journey
-                in <strong>August 2023</strong>, starting with foundational
-                programming knowledge. Through dedication and consistent
-                practice, I transformed initial challenges into strengths,
-                developing robust problem-solving skills and technical
-                expertise.</p>
-
-            <div class="timeline">
-                <!-- Building Foundations -->
-                <div class="timeline-item">
-                    <div class="timeline-content">
-                        <div class="timeline-icon">
-                            <i class="fas fa-book"></i>
-                        </div>
-                        <div class="timeline-text">
-                            <h3>Building Foundations</h3>
-                            <span class="timeline-date">2023</span>
-                            <p>Established core fundamentals in computer
-                                science:</p>
-                            <ul class="timeline-list">
-                                <li>Algorithms and Programming</li>
-                                <li>Discrete Mathematics</li>
-                                <li>Digital Systems</li>
-                            </ul>
-                            <p class="timeline-note">Developed logical
-                                thinking and mastered programming
-                                fundamentals through hands-on practice.</p>
+                    <!-- Developing Proficiency -->
+                    <div class="timeline-item">
+                        <div class="timeline-content">
+                            <div class="timeline-icon">
+                                <i class="fas fa-code"></i>
+                            </div>
+                            <div class="timeline-text">
+                                <h3>Developing Proficiency</h3>
+                                <span class="timeline-date">2024</span>
+                                <p>Advanced my programming capabilities
+                                    through:</p>
+                                <ul class="timeline-list">
+                                    <li>Object-Oriented Programming</li>
+                                    <li>Data Analysis Programming</li>
+                                    <li>Statistics and Probability</li>
+                                </ul>
+                                <p class="timeline-note">Gained confidence in
+                                    software development and understood program
+                                    architecture and design principles.</p>
+                            </div>
                         </div>
                     </div>
-                </div>
 
-                <!-- Developing Proficiency -->
-                <div class="timeline-item">
-                    <div class="timeline-content">
-                        <div class="timeline-icon">
-                            <i class="fas fa-code"></i>
-                        </div>
-                        <div class="timeline-text">
-                            <h3>Developing Proficiency</h3>
-                            <span class="timeline-date">2024</span>
-                            <p>Advanced my programming capabilities
-                                through:</p>
-                            <ul class="timeline-list">
-                                <li>Object-Oriented Programming</li>
-                                <li>Data Analysis Programming</li>
-                                <li>Statistics and Probability</li>
-                            </ul>
-                            <p class="timeline-note">Gained confidence in
-                                software development and understood program
-                                architecture and design principles.</p>
+                    <!-- Systems & Data Management -->
+                    <div class="timeline-item">
+                        <div class="timeline-content">
+                            <div class="timeline-icon">
+                                <i class="fas fa-database"></i>
+                            </div>
+                            <div class="timeline-text">
+                                <h3>Systems & Data Management</h3>
+                                <span class="timeline-date">2024</span>
+                                <p>Deepened expertise in data and systems:</p>
+                                <ul class="timeline-list">
+                                    <li>Database Design and SQL</li>
+                                    <li>Artificial Intelligence</li>
+                                    <li>Advanced Object-Oriented
+                                        Programming</li>
+                                </ul>
+                                <p class="timeline-note">Mastered data
+                                    management principles and system
+                                    architecture fundamentals.</p>
+                            </div>
                         </div>
                     </div>
-                </div>
 
-                <!-- Systems & Data Management -->
-                <div class="timeline-item">
-                    <div class="timeline-content">
-                        <div class="timeline-icon">
-                            <i class="fas fa-database"></i>
-                        </div>
-                        <div class="timeline-text">
-                            <h3>Systems & Data Management</h3>
-                            <span class="timeline-date">2024</span>
-                            <p>Deepened expertise in data and systems:</p>
-                            <ul class="timeline-list">
-                                <li>Database Design and SQL</li>
-                                <li>Artificial Intelligence</li>
-                                <li>Advanced Object-Oriented
-                                    Programming</li>
-                            </ul>
-                            <p class="timeline-note">Mastered data
-                                management principles and system
-                                architecture fundamentals.</p>
+                    <!-- Machine Learning & AI -->
+                    <div class="timeline-item">
+                        <div class="timeline-content">
+                            <div class="timeline-icon">
+                                <i class="fas fa-brain"></i>
+                            </div>
+                            <div class="timeline-text">
+                                <h3>Machine Learning & AI</h3>
+                                <span class="timeline-date">2025</span>
+                                <p>Explored intelligent systems and
+                                    algorithms:</p>
+                                <ul class="timeline-list">
+                                    <li>Machine Learning</li>
+                                    <li>Algorithm Analysis</li>
+                                    <li>Distributed Systems</li>
+                                </ul>
+                                <p class="timeline-note">Learned to leverage
+                                    data for building predictive models and
+                                    intelligent solutions.</p>
+                            </div>
                         </div>
                     </div>
-                </div>
 
-                <!-- Machine Learning & AI -->
-                <div class="timeline-item">
-                    <div class="timeline-content">
-                        <div class="timeline-icon">
-                            <i class="fas fa-brain"></i>
+                    <!-- Specialized Technologies -->
+                    <div class="timeline-item">
+                        <div class="timeline-content">
+                            <div class="timeline-icon">
+                                <i class="fas fa-eye"></i>
+                            </div>
+                            <div class="timeline-text">
+                                <h3>Specialized Technologies</h3>
+                                <span class="timeline-date">2025</span>
+                                <p>Advanced into specialized domains:</p>
+                                <ul class="timeline-list">
+                                    <li>Data Warehouse</li>
+                                    <li>Natural Language Processing (NLP)</li>
+                                    <li>Computer Vision</li>
+                                    <li>Cryptography</li>
+                                </ul>
+                                <p class="timeline-note">Applied knowledge to
+                                    real-world projects in data analysis and
+                                    machine learning.</p>
+                            </div>
                         </div>
-                        <div class="timeline-text">
-                            <h3>Machine Learning & AI</h3>
-                            <span class="timeline-date">2025</span>
-                            <p>Explored intelligent systems and
-                                algorithms:</p>
-                            <ul class="timeline-list">
-                                <li>Machine Learning</li>
-                                <li>Algorithm Analysis</li>
-                                <li>Distributed Systems</li>
-                            </ul>
-                            <p class="timeline-note">Learned to leverage
-                                data for building predictive models and
-                                intelligent solutions.</p>
+                    </div>
+
+                    <!-- Advanced Analytics -->
+                    <div class="timeline-item">
+                        <div class="timeline-content">
+                            <div class="timeline-icon">
+                                <i class="fas fa-chart-line"></i>
+                            </div>
+                            <div class="timeline-text">
+                                <h3>Advanced Analytics</h3>
+                                <span class="timeline-date">2026 –
+                                    Present</span>
+                                <p>Expanding expertise in cutting-edge
+                                    technologies:</p>
+                                <ul class="timeline-list">
+                                    <li>Big Data</li>
+                                    <li>Data Mining</li>
+                                    <li>Optimization Algorithms</li>
+                                    <li>Business Intelligence</li>
+                                </ul>
+                                <p class="timeline-note">Currently focused on
+                                    developing production-ready solutions and
+                                    preparing for professional opportunities in
+                                    Data Science.</p>
+                            </div>
                         </div>
                     </div>
                 </div>
 
-                <!-- Specialized Technologies -->
-                <div class="timeline-item">
-                    <div class="timeline-content">
-                        <div class="timeline-icon">
-                            <i class="fas fa-eye"></i>
+                <!-- Growth Summary -->
+                <div class="growth-summary">
+                    <h3>My Growth</h3>
+                    <div class="growth-grid">
+                        <div class="growth-item">
+                            <i class="fas fa-arrow-right"></i>
+                            <span>Progressed from learning programming basics to
+                                building production-ready applications</span>
                         </div>
-                        <div class="timeline-text">
-                            <h3>Specialized Technologies</h3>
-                            <span class="timeline-date">2025</span>
-                            <p>Advanced into specialized domains:</p>
-                            <ul class="timeline-list">
-                                <li>Data Warehouse</li>
-                                <li>Natural Language Processing (NLP)</li>
-                                <li>Computer Vision</li>
-                                <li>Cryptography</li>
-                            </ul>
-                            <p class="timeline-note">Applied knowledge to
-                                real-world projects in data analysis and
-                                machine learning.</p>
+                        <div class="growth-item">
+                            <i class="fas fa-arrow-right"></i>
+                            <span>Evolved from struggling with code to mastering
+                                logical problem-solving</span>
                         </div>
-                    </div>
-                </div>
-
-                <!-- Advanced Analytics -->
-                <div class="timeline-item">
-                    <div class="timeline-content">
-                        <div class="timeline-icon">
-                            <i class="fas fa-chart-line"></i>
-                        </div>
-                        <div class="timeline-text">
-                            <h3>Advanced Analytics</h3>
-                            <span class="timeline-date">2026 –
-                                Present</span>
-                            <p>Expanding expertise in cutting-edge
-                                technologies:</p>
-                            <ul class="timeline-list">
-                                <li>Big Data</li>
-                                <li>Data Mining</li>
-                                <li>Optimization Algorithms</li>
-                                <li>Business Intelligence</li>
-                            </ul>
-                            <p class="timeline-note">Currently focused on
-                                developing production-ready solutions and
-                                preparing for professional opportunities in
-                                Data Science.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Growth Summary -->
-            <div class="growth-summary">
-                <h3>My Growth</h3>
-                <div class="growth-grid">
-                    <div class="growth-item">
-                        <i class="fas fa-arrow-right"></i>
-                        <span>Progressed from learning programming basics to
-                            building production-ready applications</span>
-                    </div>
-                    <div class="growth-item">
-                        <i class="fas fa-arrow-right"></i>
-                        <span>Evolved from struggling with code to mastering
-                            logical problem-solving</span>
-                    </div>
-                    <div class="growth-item">
-                        <i class="fas fa-arrow-right"></i>
-                        <span>Transformed theoretical knowledge into
-                            practical, real-world implementations</span>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Career Focus -->
-            <div class="career-focus">
-                <h3>Career Focus</h3>
-                <p>I am dedicated to advancing my expertise in:</p>
-                <div class="focus-areas">
-                    <div class="focus-item">
-                        <i class="fas fa-chart-bar"></i>
-                        <span>Data Science</span>
-                    </div>
-                    <div class="focus-item">
-                        <i class="fas fa-table"></i>
-                        <span>Data Analysis</span>
-                    </div>
-                    <div class="focus-item">
-                        <i class="fas fa-robot"></i>
-                        <span>Machine Learning</span>
-                    </div>
-                    <div class="focus-item">
-                        <i class="fas fa-server"></i>
-                        <span>Backend / Fullstack</span>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Skills Section -->
-    <section id="skills" class="skills">
-        <div class="container">
-            <h2 class="section-title">My Skills</h2>
-            <div class="skills-container">
-                <!-- Programming Languages -->
-                <div class="skill-category">
-                    <h3><i class="fas fa-code"></i> Programming
-                        Languages</h3>
-                    <div class="skills-icons">
-                        <div class="skill-icon" title="Java">
-                            <i class="fab fa-java"></i>
-                            <span>Java</span>
-                        </div>
-                        <div class="skill-icon" title="Python">
-                            <i class="fab fa-python"></i>
-                            <span>Python</span>
-                        </div>
-                        <div class="skill-icon" title="PHP">
-                            <i class="fab fa-php"></i>
-                            <span>PHP</span>
-                        </div>
-                        <div class="skill-icon" title="JavaScript">
-                            <i class="fab fa-js"></i>
-                            <span>JavaScript</span>
+                        <div class="growth-item">
+                            <i class="fas fa-arrow-right"></i>
+                            <span>Transformed theoretical knowledge into
+                                practical, real-world implementations</span>
                         </div>
                     </div>
                 </div>
 
-                <!-- Frameworks & Tools -->
-                <div class="skill-category">
-                    <h3><i class="fas fa-tools"></i> Frameworks & Tools</h3>
-                    <div class="skills-icons">
-                        <div class="skill-icon" title="Laravel">
-                            <i class="fab fa-laravel"></i>
-                            <span>Laravel</span>
+                <!-- Career Focus -->
+                <div class="career-focus">
+                    <h3>Career Focus</h3>
+                    <p>I am dedicated to advancing my expertise in:</p>
+                    <div class="focus-areas">
+                        <div class="focus-item">
+                            <i class="fas fa-chart-bar"></i>
+                            <span>Data Science</span>
                         </div>
-                        <div class="skill-icon" title="MySQL">
-                            <i class="fas fa-database"></i>
-                            <span>MySQL</span>
-                        </div>
-                        <div class="skill-icon" title="HTML5">
-                            <i class="fab fa-html5"></i>
-                            <span>HTML</span>
-                        </div>
-                        <div class="skill-icon" title="CSS3">
-                            <i class="fab fa-css3-alt"></i>
-                            <span>CSS</span>
-                        </div>
-                        <div class="skill-icon" title="Git">
-                            <i class="fab fa-git-alt"></i>
-                            <span>Git</span>
-                        </div>
-                        <div class="skill-icon" title="GitHub">
-                            <i class="fab fa-github"></i>
-                            <span>GitHub</span>
-                        </div>
-                        <div class="skill-icon" title="Figma">
-                            <i class="fab fa-figma"></i>
-                            <span>Figma</span>
-                        </div>
-                        <div class="skill-icon" title="Filament">
-                            <i class="fas fa-film"></i>
-                            <span>Filament</span>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Data Analysis & ML -->
-                <div class="skill-category">
-                    <h3><i class="fas fa-chart-bar"></i> Data Analysis &
-                        ML</h3>
-                    <div class="skills-icons">
-                        <div class="skill-icon" title="Power BI">
-                            <i class="fas fa-chart-line"></i>
-                            <span>Power BI</span>
-                        </div>
-                        <div class="skill-icon" title="Scikit-learn">
-                            <i class="fas fa-brain"></i>
-                            <span>Scikit-learn</span>
-                        </div>
-                        <div class="skill-icon" title="Pandas">
+                        <div class="focus-item">
                             <i class="fas fa-table"></i>
-                            <span>Pandas</span>
+                            <span>Data Analysis</span>
                         </div>
-                        <div class="skill-icon" title="NumPy">
-                            <i class="fas fa-calculator"></i>
-                            <span>NumPy</span>
+                        <div class="focus-item">
+                            <i class="fas fa-robot"></i>
+                            <span>Machine Learning</span>
                         </div>
-                        <div class="skill-icon" title="DAX">
-                            <i class="fas fa-function"></i>
-                            <span>DAX</span>
-                        </div>
-                        <div class="skill-icon" title="Data Visualization">
-                            <i class="fas fa-chart-pie"></i>
-                            <span>Data Viz</span>
+                        <div class="focus-item">
+                            <i class="fas fa-server"></i>
+                            <span>Backend / Fullstack</span>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- Projects Section -->
-    <section id="projects" class="projects">
-        <div class="container">
-            <h2 class="section-title">My Projects</h2>
-
-            <!-- Web & Application Projects -->
-            <div id="projects-web" class="project-category">
-                <h3 class="category-title"><i class="fas fa-code"></i> Web &
-                    Application </h3>
-                <div class="projects-grid">
-                    <!-- Project 1: PlayStation Rental -->
-                    <div class="project-card" data-project="playstation">
-                        <div class="project-gallery">
-                            <div class="project-image-slider">
-                                <img src="project/project1/halaman-beranda-pelanggan3.png" alt="Beranda Pelanggan 3"
-                                    class="project-screenshot active" loading="lazy">
-                                <img src="project/project1/halaman-beranda-pelanggan2.png" alt="Beranda Pelanggan 2"
-                                    class="project-screenshot" loading="lazy">
-                                <img src="project/project1/dashboard-admin.png" alt="Dashboard Admin"
-                                    class="project-screenshot" loading="lazy">
-                                <img src="project/project1/halaman-beranda-pelanggan.png" alt="Beranda Pelanggan"
-                                    class="project-screenshot" loading="lazy">
-                                <img src="project/project1/halaman-beranda-pelanggan4.png" alt="Beranda Pelanggan 4"
-                                    class="project-screenshot" loading="lazy">
-                                <img src="project/project1/halaman-beranda-pemilik.png" alt="Beranda Pemilik"
-                                    class="project-screenshot" loading="lazy">
-                                <img src="project/project1/halaman-daftar-sewa-kasir.png" alt="Daftar Sewa Kasir"
-                                    class="project-screenshot" loading="lazy">
-                                <img src="project/project1/halaman-dashboard-kasir.png" alt="Dashboard Kasir"
-                                    class="project-screenshot" loading="lazy">
-                                <img src="project/project1/halaman-keranjang-pelanggan.png" alt="Keranjang Pelanggan"
-                                    class="project-screenshot" loading="lazy">
-                                <img src="project/project1/halaman-laporan-pendapatan-pemilik.png"
-                                    alt="Laporan Pendapatan" class="project-screenshot" loading="lazy">
-                                <img src="project/project1/halaman-login.png" alt="Login" class="project-screenshot"
-                                    loading="lazy">
-                                <img src="project/project1/halaman-register1.png" alt="Register 1"
-                                    class="project-screenshot" loading="lazy">
-                                <img src="project/project1/halaman-register2.png" alt="Register 2"
-                                    class="project-screenshot" loading="lazy">
-                                <img src="project/project1/halaman-riwayat-sewa-pelanggan.png" alt="Riwayat Sewa"
-                                    class="project-screenshot" loading="lazy">
-                                <img src="project/project1/halaman-sewa-game-pelanggan.png" alt="Sewa Game"
-                                    class="project-screenshot" loading="lazy">
-                                <img src="project/project1/halaman-sewa-game2-pelanggan.png" alt="Sewa Game 2"
-                                    class="project-screenshot" loading="lazy">
-                                <img src="project/project1/halaman-sewa-ps-pelanggan.png" alt="Sewa PS"
-                                    class="project-screenshot" loading="lazy">
-                                <img src="project/project1/halaman-sewa-ps2-pelanggan.png" alt="Sewa PS 2"
-                                    class="project-screenshot" loading="lazy">
-                                <img src="project/project1/halaman-status-unit-pemilik.png" alt="Status Unit"
-                                    class="project-screenshot" loading="lazy">
-                                <img src="project/project1/halaman-transaksi-kasir.png" alt="Transaksi Kasir"
-                                    class="project-screenshot" loading="lazy">
-                                <img src="project/project1/h.png" alt="Home" class="project-screenshot" loading="lazy">
-                                <img src="project/project1/laporan-admin.png" alt="Laporan Admin"
-                                    class="project-screenshot" loading="lazy">
-                                <img src="project/project1/tambah-aksesoris-admin.png" alt="Tambah Aksesoris"
-                                    class="project-screenshot" loading="lazy">
-                                <img src="project/project1/tambah-game-admin.png" alt="Tambah Game"
-                                    class="project-screenshot" loading="lazy">
-                                <img src="project/project1/tambah-kasir-admin.png" alt="Tambah Kasir"
-                                    class="project-screenshot" loading="lazy">
-                                <img src="project/project1/tambah-pelanggan-admin.png" alt="Tambah Pelanggan"
-                                    class="project-screenshot" loading="lazy">
-                                <img src="project/project1/tambah-pemilik-admin.png" alt="Tambah Pemilik"
-                                    class="project-screenshot" loading="lazy">
-                                <img src="project/project1/tambah-unit-ps-admin.png" alt="Tambah Unit PS"
-                                    class="project-screenshot" loading="lazy">
+        <!-- Skills Section -->
+        <section id="skills" class="skills">
+            <div class="container">
+                <h2 class="section-title">My Skills</h2>
+                <div class="skills-container">
+                    <!-- Programming Languages -->
+                    <div class="skill-category">
+                        <h3><i class="fas fa-code"></i> Programming
+                            Languages</h3>
+                        <div class="skills-icons">
+                            <div class="skill-icon" title="Java">
+                                <i class="fab fa-java"></i>
+                                <span>Java</span>
                             </div>
-                            <button class="gallery-nav gallery-prev" onclick="slideGallery(this, -1)">
-                                <i class="fas fa-chevron-left"></i>
-                            </button>
-                            <button class="gallery-nav gallery-next" onclick="slideGallery(this, 1)">
-                                <i class="fas fa-chevron-right"></i>
-                            </button>
-                            <div class="gallery-dots">
-                                <span class="dot active" data-index="0"></span>
-                                <span class="dot" data-index="1"></span>
-                                <span class="dot" data-index="2"></span>
-                                <span class="dot" data-index="3"></span>
-                                <span class="dot" data-index="4"></span>
-                                <span class="dot" data-index="5"></span>
-                                <span class="dot" data-index="6"></span>
-                                <span class="dot" data-index="7"></span>
-                                <span class="dot" data-index="8"></span>
-                                <span class="dot" data-index="9"></span>
-                                <span class="dot" data-index="10"></span>
-                                <span class="dot" data-index="11"></span>
-                                <span class="dot" data-index="12"></span>
-                                <span class="dot" data-index="13"></span>
-                                <span class="dot" data-index="14"></span>
-                                <span class="dot" data-index="15"></span>
-                                <span class="dot" data-index="16"></span>
-                                <span class="dot" data-index="17"></span>
-                                <span class="dot" data-index="18"></span>
-                                <span class="dot" data-index="19"></span>
-                                <span class="dot" data-index="20"></span>
-                                <span class="dot" data-index="21"></span>
-                                <span class="dot" data-index="22"></span>
-                                <span class="dot" data-index="23"></span>
-                                <span class="dot" data-index="24"></span>
-                                <span class="dot" data-index="25"></span>
-                                <span class="dot" data-index="26"></span>
-                                <span class="dot" data-index="27"></span>
+                            <div class="skill-icon" title="Python">
+                                <i class="fab fa-python"></i>
+                                <span>Python</span>
                             </div>
-                            <div class="project-overlay">
-                                <a href="#" onclick="openFullGallery('playstation'); return false;"
-                                    class="project-link view-project-link">
-                                    <i class="fas fa-eye"></i> View Project
-                                </a>
-                            </div>
-                        </div>
-                        <div class="project-info">
-                            <h3>PlayStation Rental Application</h3>
-                            <p>Application for managing PlayStation rental
-                                services with booking and payment
-                                integration.</p>
-                            <div class="project-tech">
+                            <div class="skill-icon" title="PHP">
+                                <i class="fab fa-php"></i>
                                 <span>PHP</span>
-                                <span>Laravel</span>
-                                <span>Blade</span>
-                                <span>MySQL</span>
                             </div>
-                            <div class="project-links">
-                                <a href="https://github.com/Daalleee/playstation.git" target="_blank"
-                                    class="project-link">
-                                    <i class="fab fa-github"></i> GitHub
-                                </a>
+                            <div class="skill-icon" title="JavaScript">
+                                <i class="fab fa-js"></i>
+                                <span>JavaScript</span>
                             </div>
                         </div>
                     </div>
 
-                    <!-- Project 2: Marketplace -->
-                    <div class="project-card" data-project="marketplace">
-                        <div class="project-gallery">
-                            <div class="project-image-slider">
-                                <img src="project/project2/02-homepage-marketplace/homepage-2.png" alt="Homepage 2"
-                                    class="project-screenshot active" loading="lazy">
-                                <img src="project/project2/01-authentication/login.png" alt="Login"
-                                    class="project-screenshot" loading="lazy">
-                                <img src="project/project2/01-authentication/register.png" alt="Register"
-                                    class="project-screenshot" loading="lazy">
-                                <img src="project/project2/01-authentication/login-customer-home.png"
-                                    alt="Login Customer Home" class="project-screenshot" loading="lazy">
-                                <img src="project/project2/01-authentication/login-customer-home-2.png"
-                                    alt="Login Customer Home 2" class="project-screenshot" loading="lazy">
-                                <img src="project/project2/02-homepage-marketplace/homepage-1.png" alt="Homepage 1"
-                                    class="project-screenshot" loading="lazy">
-                                <img src="project/project2/02-homepage-marketplace/homepage-3.png" alt="Homepage 3"
-                                    class="project-screenshot" loading="lazy">
-                                <img src="project/project2/02-homepage-marketplace/marketplace.png" alt="Marketplace"
-                                    class="project-screenshot" loading="lazy">
-                                <img src="project/project2/03-user-dashboard/sell-form.png" alt="Sell Form"
-                                    class="project-screenshot" loading="lazy">
-                                <img src="project/project2/03-user-dashboard/sell-form-2.png" alt="Sell Form 2"
-                                    class="project-screenshot" loading="lazy">
-                                <img src="project/project2/04-shopping-checkout/cart.png" alt="Shopping Cart"
-                                    class="project-screenshot" loading="lazy">
-                                <img src="project/project2/05-order-management/orders.png" alt="Orders"
-                                    class="project-screenshot" loading="lazy">
-                                <img src="project/project2/06-communication/messages.png" alt="Messages"
-                                    class="project-screenshot" loading="lazy">
-                            </div>
-                            <button class="gallery-nav gallery-prev" onclick="slideGallery(this, -1)">
-                                <i class="fas fa-chevron-left"></i>
-                            </button>
-                            <button class="gallery-nav gallery-next" onclick="slideGallery(this, 1)">
-                                <i class="fas fa-chevron-right"></i>
-                            </button>
-                            <div class="gallery-dots">
-                                <span class="dot active" data-index="0"></span>
-                                <span class="dot" data-index="1"></span>
-                                <span class="dot" data-index="2"></span>
-                                <span class="dot" data-index="3"></span>
-                                <span class="dot" data-index="4"></span>
-                                <span class="dot" data-index="5"></span>
-                                <span class="dot" data-index="6"></span>
-                                <span class="dot" data-index="7"></span>
-                                <span class="dot" data-index="8"></span>
-                                <span class="dot" data-index="9"></span>
-                                <span class="dot" data-index="10"></span>
-                                <span class="dot" data-index="11"></span>
-                                <span class="dot" data-index="12"></span>
-                            </div>
-                            <div class="project-overlay">
-                                <a href="#" onclick="openFullGallery('marketplace'); return false;"
-                                    class="project-link view-project-link">
-                                    <i class="fas fa-eye"></i> View Project
-                                </a>
-                            </div>
-                        </div>
-                        <div class="project-info">
-                            <h3>Marketplace Application</h3>
-                            <p>Online marketplace platform for buying and
-                                selling products with secure
-                                transactions.</p>
-                            <div class="project-tech">
-                                <span>PHP</span>
+                    <!-- Frameworks & Tools -->
+                    <div class="skill-category">
+                        <h3><i class="fas fa-tools"></i> Frameworks & Tools</h3>
+                        <div class="skills-icons">
+                            <div class="skill-icon" title="Laravel">
+                                <i class="fab fa-laravel"></i>
                                 <span>Laravel</span>
+                            </div>
+                            <div class="skill-icon" title="MySQL">
+                                <i class="fas fa-database"></i>
                                 <span>MySQL</span>
-                                <span>Bootstrap</span>
                             </div>
-                            <div class="project-links">
-                                <a href="https://github.com/Daalleee/marketplace.git" target="_blank"
-                                    class="project-link">
-                                    <i class="fab fa-github"></i> GitHub
-                                </a>
+                            <div class="skill-icon" title="HTML5">
+                                <i class="fab fa-html5"></i>
+                                <span>HTML</span>
                             </div>
-                        </div>
-                    </div>
-
-                    <!-- Project 3: Dapur Roti -->
-                    <div class="project-card" data-project="dapur-roti">
-                        <div class="project-gallery">
-                            <div class="project-image-slider">
-                                <img src="project/project3/02-homepage-products.png" alt="Dapur Roti - Products"
-                                    class="project-screenshot active" loading="lazy">
-                                <img src="project/project3/01-homepage.png" alt="Dapur Roti - Homepage"
-                                    class="project-screenshot" loading="lazy">
-                                <img src="project/project3/03-kategori.png" alt="Dapur Roti - Categories"
-                                    class="project-screenshot" loading="lazy">
-                                <img src="project/project3/04-login.png" alt="Dapur Roti - Login"
-                                    class="project-screenshot" loading="lazy">
-                                <img src="project/project3/05-admin-dashboard.png" alt="Dapur Roti - Admin Dashboard"
-                                    class="project-screenshot" loading="lazy">
-                                <img src="project/project3/06-admin-orders.png" alt="Dapur Roti - Admin Orders"
-                                    class="project-screenshot" loading="lazy">
-                                <img src="project/project3/07-admin-add-product.png" alt="Dapur Roti - Add Product"
-                                    class="project-screenshot" loading="lazy">
-                                <img src="project/project3/08-admin-add-category.png" alt="Dapur Roti - Add Category"
-                                    class="project-screenshot" loading="lazy">
-                                <img src="project/project3/09-admin-reports.png" alt="Dapur Roti - Reports"
-                                    class="project-screenshot" loading="lazy">
-                            </div>
-                            <button class="gallery-nav gallery-prev" onclick="slideGallery(this, -1)">
-                                <i class="fas fa-chevron-left"></i>
-                            </button>
-                            <button class="gallery-nav gallery-next" onclick="slideGallery(this, 1)">
-                                <i class="fas fa-chevron-right"></i>
-                            </button>
-                            <div class="gallery-dots">
-                                <span class="dot active" data-index="0"></span>
-                                <span class="dot" data-index="1"></span>
-                                <span class="dot" data-index="2"></span>
-                                <span class="dot" data-index="3"></span>
-                                <span class="dot" data-index="4"></span>
-                                <span class="dot" data-index="5"></span>
-                                <span class="dot" data-index="6"></span>
-                                <span class="dot" data-index="7"></span>
-                                <span class="dot" data-index="8"></span>
-                            </div>
-                            <div class="project-overlay">
-                                <a href="#" onclick="openFullGallery('dapur-roti'); return false;"
-                                    class="project-link view-project-link">
-                                    <i class="fas fa-eye"></i> View Project
-                                </a>
-                            </div>
-                        </div>
-                        <div class="project-info">
-                            <h3>Dapur Roti Application</h3>
-                            <p>Bakery management system for ordering and
-                                managing bread products online.</p>
-                            <div class="project-tech">
-                                <span>PHP</span>
-                                <span>Laravel</span>
-                                <span>MySQL</span>
+                            <div class="skill-icon" title="CSS3">
+                                <i class="fab fa-css3-alt"></i>
                                 <span>CSS</span>
                             </div>
-                            <div class="project-links">
-                                <a href="https://github.com/Daalleee/dapur-roti.git" target="_blank"
-                                    class="project-link">
-                                    <i class="fab fa-github"></i> GitHub
-                                </a>
+                            <div class="skill-icon" title="Git">
+                                <i class="fab fa-git-alt"></i>
+                                <span>Git</span>
                             </div>
-                        </div>
-                    </div>
-
-                    <!-- Project 4: Rental Motor -->
-                    <div class="project-card" data-project="rental-motor">
-                        <div class="project-gallery">
-                            <div class="project-image-slider">
-                                <img src="project/project4/user-dashboard-motors.png"
-                                    alt="Rental Motor - User Dashboard" class="project-screenshot active"
-                                    loading="lazy">
-                                <img src="project/project4/auth-login.png" alt="Rental Motor - Login"
-                                    class="project-screenshot" loading="lazy">
-                                <img src="project/project4/auth-register.png" alt="Rental Motor - Register"
-                                    class="project-screenshot" loading="lazy">
-                                <img src="project/project4/admin-motor-management.png"
-                                    alt="Rental Motor - Motor Management" class="project-screenshot" loading="lazy">
-                                <img src="project/project4/admin-rentals.png" alt="Rental Motor - Rentals Management"
-                                    class="project-screenshot" loading="lazy">
-                                <img src="project/project4/kelola_pengguna_admin.png"
-                                    alt="Rental Motor - User Management" class="project-screenshot" loading="lazy">
-                                <img src="project/project4/kasir-daftar-sewa.png" alt="Rental Motor - Kasir Daftar Sewa"
-                                    class="project-screenshot" loading="lazy">
-                                <img src="project/project4/kasir-status-sewa.png" alt="Rental Motor - Kasir Status Sewa"
-                                    class="project-screenshot" loading="lazy">
+                            <div class="skill-icon" title="GitHub">
+                                <i class="fab fa-github"></i>
+                                <span>GitHub</span>
                             </div>
-                            <button class="gallery-nav gallery-prev" onclick="slideGallery(this, -1)">
-                                <i class="fas fa-chevron-left"></i>
-                            </button>
-                            <button class="gallery-nav gallery-next" onclick="slideGallery(this, 1)">
-                                <i class="fas fa-chevron-right"></i>
-                            </button>
-                            <div class="gallery-dots">
-                                <span class="dot active" data-index="0"></span>
-                                <span class="dot" data-index="1"></span>
-                                <span class="dot" data-index="2"></span>
-                                <span class="dot" data-index="3"></span>
-                                <span class="dot" data-index="4"></span>
-                                <span class="dot" data-index="5"></span>
-                                <span class="dot" data-index="6"></span>
-                                <span class="dot" data-index="7"></span>
+                            <div class="skill-icon" title="Figma">
+                                <i class="fab fa-figma"></i>
+                                <span>Figma</span>
                             </div>
-                            <div class="project-overlay">
-                                <a href="#" onclick="openFullGallery('rental-motor'); return false;"
-                                    class="project-link view-project-link">
-                                    <i class="fas fa-eye"></i> View Project
-                                </a>
-                            </div>
-                        </div>
-                        <div class="project-info">
-                            <h3>Rental Motor Application</h3>
-                            <p>Motorcycle rental management system with
-                                booking, inventory, and customer
-                                management.</p>
-                            <div class="project-tech">
-                                <span>PHP</span>
-                                <span>Laravel</span>
-                                <span>Blade</span>
+                            <div class="skill-icon" title="Filament">
+                                <i class="fas fa-film"></i>
                                 <span>Filament</span>
-                                <span>MySQL</span>
                             </div>
-                            <div class="project-links">
-                                <a href="https://github.com/Daalleee/project-rental-motor.git" target="_blank"
-                                    class="project-link">
-                                    <i class="fab fa-github"></i> GitHub
-                                </a>
+                        </div>
+                    </div>
+
+                    <!-- Data Analysis & ML -->
+                    <div class="skill-category">
+                        <h3><i class="fas fa-chart-bar"></i> Data Analysis &
+                            ML</h3>
+                        <div class="skills-icons">
+                            <div class="skill-icon" title="Power BI">
+                                <i class="fas fa-chart-line"></i>
+                                <span>Power BI</span>
+                            </div>
+                            <div class="skill-icon" title="Scikit-learn">
+                                <i class="fas fa-brain"></i>
+                                <span>Scikit-learn</span>
+                            </div>
+                            <div class="skill-icon" title="Pandas">
+                                <i class="fas fa-table"></i>
+                                <span>Pandas</span>
+                            </div>
+                            <div class="skill-icon" title="NumPy">
+                                <i class="fas fa-calculator"></i>
+                                <span>NumPy</span>
+                            </div>
+                            <div class="skill-icon" title="DAX">
+                                <i class="fas fa-function"></i>
+                                <span>DAX</span>
+                            </div>
+                            <div class="skill-icon" title="Data Visualization">
+                                <i class="fas fa-chart-pie"></i>
+                                <span>Data Viz</span>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
+        </section>
 
-            <!-- Data Analysis & Business Intelligence Projects -->
-            <div id="projects-data" class="project-category">
-                <h3 class="category-title"><i class="fas fa-chart-bar"></i>
-                    Data Analysis & Business Intelligence</h3>
-                <div class="projects-grid">
-                    <!-- Project 5: Power BI - Chocolate Sales Analysis -->
-                    <div class="project-card" data-project="powerbi-chocolate">
-                        <div class="project-gallery">
-                            <div class="project-image-slider">
-                                <img src="project/project5/Cuplikan layar 2026-03-27 150607.png"
-                                    alt="Dashboard Overview" class="project-screenshot active" loading="lazy">
-                                <img src="project/project5/Cuplikan layar 2026-03-27 150633.png"
-                                    alt="Revenue by Country" class="project-screenshot" loading="lazy">
-                                <img src="project/project5/Cuplikan layar 2026-03-27 150651.png"
-                                    alt="Salesperson Performance" class="project-screenshot" loading="lazy">
-                                <img src="project/project5/Cuplikan layar 2026-03-27 150710.png" alt="Top Products"
-                                    class="project-screenshot" loading="lazy">
-                                <img src="project/project5/" alt="performa team" class="project-screenshot"
-                                    loading="lazy">
+        <!-- Projects Section -->
+        <section id="projects" class="projects">
+            <div class="container">
+                <h2 class="section-title">My Projects</h2>
+
+                <!-- Web & Application Projects -->
+                <div id="projects-web" class="project-category">
+                    <h3 class="category-title"><i class="fas fa-code"></i> Web &
+                        Application </h3>
+                    <div class="projects-grid">
+                        <!-- Project 1: PlayStation Rental -->
+                        <div class="project-card" data-project="playstation">
+                            <div class="project-gallery">
+                                <div class="project-image-slider">
+                                    <img
+                                        src="project/project1/halaman-beranda-pelanggan3.png"
+                                        alt="Beranda Pelanggan 3"
+                                        class="project-screenshot active"
+                                        loading="lazy">
+                                    <img
+                                        src="project/project1/halaman-beranda-pelanggan2.png"
+                                        alt="Beranda Pelanggan 2"
+                                        class="project-screenshot"
+                                        loading="lazy">
+                                    <img
+                                        src="project/project1/dashboard-admin.png"
+                                        alt="Dashboard Admin"
+                                        class="project-screenshot"
+                                        loading="lazy">
+                                    <img
+                                        src="project/project1/halaman-beranda-pelanggan.png"
+                                        alt="Beranda Pelanggan"
+                                        class="project-screenshot"
+                                        loading="lazy">
+                                    <img
+                                        src="project/project1/halaman-beranda-pelanggan4.png"
+                                        alt="Beranda Pelanggan 4"
+                                        class="project-screenshot"
+                                        loading="lazy">
+                                    <img
+                                        src="project/project1/halaman-beranda-pemilik.png"
+                                        alt="Beranda Pemilik"
+                                        class="project-screenshot"
+                                        loading="lazy">
+                                    <img
+                                        src="project/project1/halaman-daftar-sewa-kasir.png"
+                                        alt="Daftar Sewa Kasir"
+                                        class="project-screenshot"
+                                        loading="lazy">
+                                    <img
+                                        src="project/project1/halaman-dashboard-kasir.png"
+                                        alt="Dashboard Kasir"
+                                        class="project-screenshot"
+                                        loading="lazy">
+                                    <img
+                                        src="project/project1/halaman-keranjang-pelanggan.png"
+                                        alt="Keranjang Pelanggan"
+                                        class="project-screenshot"
+                                        loading="lazy">
+                                    <img
+                                        src="project/project1/halaman-laporan-pendapatan-pemilik.png"
+                                        alt="Laporan Pendapatan"
+                                        class="project-screenshot"
+                                        loading="lazy">
+                                    <img
+                                        src="project/project1/halaman-login.png"
+                                        alt="Login" class="project-screenshot"
+                                        loading="lazy">
+                                    <img
+                                        src="project/project1/halaman-register1.png"
+                                        alt="Register 1"
+                                        class="project-screenshot"
+                                        loading="lazy">
+                                    <img
+                                        src="project/project1/halaman-register2.png"
+                                        alt="Register 2"
+                                        class="project-screenshot"
+                                        loading="lazy">
+                                    <img
+                                        src="project/project1/halaman-riwayat-sewa-pelanggan.png"
+                                        alt="Riwayat Sewa"
+                                        class="project-screenshot"
+                                        loading="lazy">
+                                    <img
+                                        src="project/project1/halaman-sewa-game-pelanggan.png"
+                                        alt="Sewa Game"
+                                        class="project-screenshot"
+                                        loading="lazy">
+                                    <img
+                                        src="project/project1/halaman-sewa-game2-pelanggan.png"
+                                        alt="Sewa Game 2"
+                                        class="project-screenshot"
+                                        loading="lazy">
+                                    <img
+                                        src="project/project1/halaman-sewa-ps-pelanggan.png"
+                                        alt="Sewa PS"
+                                        class="project-screenshot"
+                                        loading="lazy">
+                                    <img
+                                        src="project/project1/halaman-sewa-ps2-pelanggan.png"
+                                        alt="Sewa PS 2"
+                                        class="project-screenshot"
+                                        loading="lazy">
+                                    <img
+                                        src="project/project1/halaman-status-unit-pemilik.png"
+                                        alt="Status Unit"
+                                        class="project-screenshot"
+                                        loading="lazy">
+                                    <img
+                                        src="project/project1/halaman-transaksi-kasir.png"
+                                        alt="Transaksi Kasir"
+                                        class="project-screenshot"
+                                        loading="lazy">
+                                    <img src="project/project1/h.png" alt="Home"
+                                        class="project-screenshot"
+                                        loading="lazy">
+                                    <img
+                                        src="project/project1/laporan-admin.png"
+                                        alt="Laporan Admin"
+                                        class="project-screenshot"
+                                        loading="lazy">
+                                    <img
+                                        src="project/project1/tambah-aksesoris-admin.png"
+                                        alt="Tambah Aksesoris"
+                                        class="project-screenshot"
+                                        loading="lazy">
+                                    <img
+                                        src="project/project1/tambah-game-admin.png"
+                                        alt="Tambah Game"
+                                        class="project-screenshot"
+                                        loading="lazy">
+                                    <img
+                                        src="project/project1/tambah-kasir-admin.png"
+                                        alt="Tambah Kasir"
+                                        class="project-screenshot"
+                                        loading="lazy">
+                                    <img
+                                        src="project/project1/tambah-pelanggan-admin.png"
+                                        alt="Tambah Pelanggan"
+                                        class="project-screenshot"
+                                        loading="lazy">
+                                    <img
+                                        src="project/project1/tambah-pemilik-admin.png"
+                                        alt="Tambah Pemilik"
+                                        class="project-screenshot"
+                                        loading="lazy">
+                                    <img
+                                        src="project/project1/tambah-unit-ps-admin.png"
+                                        alt="Tambah Unit PS"
+                                        class="project-screenshot"
+                                        loading="lazy">
+                                </div>
+                                <button class="gallery-nav gallery-prev"
+                                    onclick="slideGallery(this, -1)">
+                                    <i class="fas fa-chevron-left"></i>
+                                </button>
+                                <button class="gallery-nav gallery-next"
+                                    onclick="slideGallery(this, 1)">
+                                    <i class="fas fa-chevron-right"></i>
+                                </button>
+                                <div class="gallery-dots">
+                                    <span class="dot active"
+                                        data-index="0"></span>
+                                    <span class="dot" data-index="1"></span>
+                                    <span class="dot" data-index="2"></span>
+                                    <span class="dot" data-index="3"></span>
+                                    <span class="dot" data-index="4"></span>
+                                    <span class="dot" data-index="5"></span>
+                                    <span class="dot" data-index="6"></span>
+                                    <span class="dot" data-index="7"></span>
+                                    <span class="dot" data-index="8"></span>
+                                    <span class="dot" data-index="9"></span>
+                                    <span class="dot" data-index="10"></span>
+                                    <span class="dot" data-index="11"></span>
+                                    <span class="dot" data-index="12"></span>
+                                    <span class="dot" data-index="13"></span>
+                                    <span class="dot" data-index="14"></span>
+                                    <span class="dot" data-index="15"></span>
+                                    <span class="dot" data-index="16"></span>
+                                    <span class="dot" data-index="17"></span>
+                                    <span class="dot" data-index="18"></span>
+                                    <span class="dot" data-index="19"></span>
+                                    <span class="dot" data-index="20"></span>
+                                    <span class="dot" data-index="21"></span>
+                                    <span class="dot" data-index="22"></span>
+                                    <span class="dot" data-index="23"></span>
+                                    <span class="dot" data-index="24"></span>
+                                    <span class="dot" data-index="25"></span>
+                                    <span class="dot" data-index="26"></span>
+                                    <span class="dot" data-index="27"></span>
+                                </div>
+                                <div class="project-overlay">
+                                    <a href="#"
+                                        onclick="openFullGallery('playstation'); return false;"
+                                        class="project-link view-project-link">
+                                        <i class="fas fa-eye"></i> View Project
+                                    </a>
+                                </div>
                             </div>
-                            <button class="gallery-nav gallery-prev" onclick="slideGallery(this, -1)">
-                                <i class="fas fa-chevron-left"></i>
-                            </button>
-                            <button class="gallery-nav gallery-next" onclick="slideGallery(this, 1)">
-                                <i class="fas fa-chevron-right"></i>
-                            </button>
-                            <div class="gallery-dots">
-                                <span class="dot active" data-index="0"></span>
-                                <span class="dot" data-index="1"></span>
-                                <span class="dot" data-index="2"></span>
-                                <span class="dot" data-index="3"></span>
-                                <span class="dot" data-index="4"></span>
-                                <span class="dot" data-index="5"></span>
-                            </div>
-                            <div class="project-overlay">
-                                <a href="#" onclick="openFullGallery('powerbi-chocolate'); return false;"
-                                    class="project-link view-project-link">
-                                    <i class="fas fa-eye"></i> View Project
-                                </a>
+                            <div class="project-info">
+                                <h3>PlayStation Rental Application</h3>
+                                <p>Application for managing PlayStation rental
+                                    services with booking and payment
+                                    integration.</p>
+                                <div class="project-tech">
+                                    <span>PHP</span>
+                                    <span>Laravel</span>
+                                    <span>Blade</span>
+                                    <span>MySQL</span>
+                                </div>
+                                <div class="project-links">
+                                    <a
+                                        href="https://github.com/Daalleee/playstation.git"
+                                        target="_blank"
+                                        class="project-link">
+                                        <i class="fab fa-github"></i> GitHub
+                                    </a>
+                                </div>
                             </div>
                         </div>
-                        <div class="project-info">
-                            <h3>Chocolate Sales Analysis - Power BI
-                                Dashboard</h3>
-                            <p>Interactive business intelligence dashboard
-                                analyzing chocolate sales performance with
-                                7,905 transactions and $44.7M revenue
-                                insights.</p>
-                            <div class="project-tech">
-                                <span>Data Cleaning</span>
-                                <span>Power BI</span>
-                                <span>DAX</span>
-                                <span>Data Modeling</span>
-                                <span>Data Visualization</span>
+
+                        <!-- Project 2: Marketplace -->
+                        <div class="project-card" data-project="marketplace">
+                            <div class="project-gallery">
+                                <div class="project-image-slider">
+                                    <img
+                                        src="project/project2/02-homepage-marketplace/homepage-2.png"
+                                        alt="Homepage 2"
+                                        class="project-screenshot active"
+                                        loading="lazy">
+                                    <img
+                                        src="project/project2/01-authentication/login.png"
+                                        alt="Login"
+                                        class="project-screenshot"
+                                        loading="lazy">
+                                    <img
+                                        src="project/project2/01-authentication/register.png"
+                                        alt="Register"
+                                        class="project-screenshot"
+                                        loading="lazy">
+                                    <img
+                                        src="project/project2/01-authentication/login-customer-home.png"
+                                        alt="Login Customer Home"
+                                        class="project-screenshot"
+                                        loading="lazy">
+                                    <img
+                                        src="project/project2/01-authentication/login-customer-home-2.png"
+                                        alt="Login Customer Home 2"
+                                        class="project-screenshot"
+                                        loading="lazy">
+                                    <img
+                                        src="project/project2/02-homepage-marketplace/homepage-1.png"
+                                        alt="Homepage 1"
+                                        class="project-screenshot"
+                                        loading="lazy">
+                                    <img
+                                        src="project/project2/02-homepage-marketplace/homepage-3.png"
+                                        alt="Homepage 3"
+                                        class="project-screenshot"
+                                        loading="lazy">
+                                    <img
+                                        src="project/project2/02-homepage-marketplace/marketplace.png"
+                                        alt="Marketplace"
+                                        class="project-screenshot"
+                                        loading="lazy">
+                                    <img
+                                        src="project/project2/03-user-dashboard/sell-form.png"
+                                        alt="Sell Form"
+                                        class="project-screenshot"
+                                        loading="lazy">
+                                    <img
+                                        src="project/project2/03-user-dashboard/sell-form-2.png"
+                                        alt="Sell Form 2"
+                                        class="project-screenshot"
+                                        loading="lazy">
+                                    <img
+                                        src="project/project2/04-shopping-checkout/cart.png"
+                                        alt="Shopping Cart"
+                                        class="project-screenshot"
+                                        loading="lazy">
+                                    <img
+                                        src="project/project2/05-order-management/orders.png"
+                                        alt="Orders"
+                                        class="project-screenshot"
+                                        loading="lazy">
+                                    <img
+                                        src="project/project2/06-communication/messages.png"
+                                        alt="Messages"
+                                        class="project-screenshot"
+                                        loading="lazy">
+                                </div>
+                                <button class="gallery-nav gallery-prev"
+                                    onclick="slideGallery(this, -1)">
+                                    <i class="fas fa-chevron-left"></i>
+                                </button>
+                                <button class="gallery-nav gallery-next"
+                                    onclick="slideGallery(this, 1)">
+                                    <i class="fas fa-chevron-right"></i>
+                                </button>
+                                <div class="gallery-dots">
+                                    <span class="dot active"
+                                        data-index="0"></span>
+                                    <span class="dot" data-index="1"></span>
+                                    <span class="dot" data-index="2"></span>
+                                    <span class="dot" data-index="3"></span>
+                                    <span class="dot" data-index="4"></span>
+                                    <span class="dot" data-index="5"></span>
+                                    <span class="dot" data-index="6"></span>
+                                    <span class="dot" data-index="7"></span>
+                                    <span class="dot" data-index="8"></span>
+                                    <span class="dot" data-index="9"></span>
+                                    <span class="dot" data-index="10"></span>
+                                    <span class="dot" data-index="11"></span>
+                                    <span class="dot" data-index="12"></span>
+                                </div>
+                                <div class="project-overlay">
+                                    <a href="#"
+                                        onclick="openFullGallery('marketplace'); return false;"
+                                        class="project-link view-project-link">
+                                        <i class="fas fa-eye"></i> View Project
+                                    </a>
+                                </div>
                             </div>
-                            <div class="project-links">
-                                <a href="#" class="project-link"
-                                    onclick="alert('Power BI report will be available soon!'); return false;">
-                                    <i class="fas fa-chart-bar"></i> View
-                                    Dashboard
-                                </a>
+                            <div class="project-info">
+                                <h3>Marketplace Application</h3>
+                                <p>Online marketplace platform for buying and
+                                    selling products with secure
+                                    transactions.</p>
+                                <div class="project-tech">
+                                    <span>PHP</span>
+                                    <span>Laravel</span>
+                                    <span>MySQL</span>
+                                    <span>Bootstrap</span>
+                                </div>
+                                <div class="project-links">
+                                    <a
+                                        href="https://github.com/Daalleee/marketplace.git"
+                                        target="_blank"
+                                        class="project-link">
+                                        <i class="fab fa-github"></i> GitHub
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Project 3: Dapur Roti -->
+                        <div class="project-card" data-project="dapur-roti">
+                            <div class="project-gallery">
+                                <div class="project-image-slider">
+                                    <img
+                                        src="project/project3/02-homepage-products.png"
+                                        alt="Dapur Roti - Products"
+                                        class="project-screenshot active"
+                                        loading="lazy">
+                                    <img src="project/project3/01-homepage.png"
+                                        alt="Dapur Roti - Homepage"
+                                        class="project-screenshot"
+                                        loading="lazy">
+                                    <img src="project/project3/03-kategori.png"
+                                        alt="Dapur Roti - Categories"
+                                        class="project-screenshot"
+                                        loading="lazy">
+                                    <img src="project/project3/04-login.png"
+                                        alt="Dapur Roti - Login"
+                                        class="project-screenshot"
+                                        loading="lazy">
+                                    <img
+                                        src="project/project3/05-admin-dashboard.png"
+                                        alt="Dapur Roti - Admin Dashboard"
+                                        class="project-screenshot"
+                                        loading="lazy">
+                                    <img
+                                        src="project/project3/06-admin-orders.png"
+                                        alt="Dapur Roti - Admin Orders"
+                                        class="project-screenshot"
+                                        loading="lazy">
+                                    <img
+                                        src="project/project3/07-admin-add-product.png"
+                                        alt="Dapur Roti - Add Product"
+                                        class="project-screenshot"
+                                        loading="lazy">
+                                    <img
+                                        src="project/project3/08-admin-add-category.png"
+                                        alt="Dapur Roti - Add Category"
+                                        class="project-screenshot"
+                                        loading="lazy">
+                                    <img
+                                        src="project/project3/09-admin-reports.png"
+                                        alt="Dapur Roti - Reports"
+                                        class="project-screenshot"
+                                        loading="lazy">
+                                </div>
+                                <button class="gallery-nav gallery-prev"
+                                    onclick="slideGallery(this, -1)">
+                                    <i class="fas fa-chevron-left"></i>
+                                </button>
+                                <button class="gallery-nav gallery-next"
+                                    onclick="slideGallery(this, 1)">
+                                    <i class="fas fa-chevron-right"></i>
+                                </button>
+                                <div class="gallery-dots">
+                                    <span class="dot active"
+                                        data-index="0"></span>
+                                    <span class="dot" data-index="1"></span>
+                                    <span class="dot" data-index="2"></span>
+                                    <span class="dot" data-index="3"></span>
+                                    <span class="dot" data-index="4"></span>
+                                    <span class="dot" data-index="5"></span>
+                                    <span class="dot" data-index="6"></span>
+                                    <span class="dot" data-index="7"></span>
+                                    <span class="dot" data-index="8"></span>
+                                </div>
+                                <div class="project-overlay">
+                                    <a href="#"
+                                        onclick="openFullGallery('dapur-roti'); return false;"
+                                        class="project-link view-project-link">
+                                        <i class="fas fa-eye"></i> View Project
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="project-info">
+                                <h3>Dapur Roti Application</h3>
+                                <p>Bakery management system for ordering and
+                                    managing bread products online.</p>
+                                <div class="project-tech">
+                                    <span>PHP</span>
+                                    <span>Laravel</span>
+                                    <span>MySQL</span>
+                                    <span>CSS</span>
+                                </div>
+                                <div class="project-links">
+                                    <a
+                                        href="https://github.com/Daalleee/dapur-roti.git"
+                                        target="_blank"
+                                        class="project-link">
+                                        <i class="fab fa-github"></i> GitHub
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Project 4: Rental Motor -->
+                        <div class="project-card" data-project="rental-motor">
+                            <div class="project-gallery">
+                                <div class="project-image-slider">
+                                    <img
+                                        src="project/project4/user-dashboard-motors.png"
+                                        alt="Rental Motor - User Dashboard"
+                                        class="project-screenshot active"
+                                        loading="lazy">
+                                    <img src="project/project4/auth-login.png"
+                                        alt="Rental Motor - Login"
+                                        class="project-screenshot"
+                                        loading="lazy">
+                                    <img
+                                        src="project/project4/auth-register.png"
+                                        alt="Rental Motor - Register"
+                                        class="project-screenshot"
+                                        loading="lazy">
+                                    <img
+                                        src="project/project4/admin-motor-management.png"
+                                        alt="Rental Motor - Motor Management"
+                                        class="project-screenshot"
+                                        loading="lazy">
+                                    <img
+                                        src="project/project4/admin-rentals.png"
+                                        alt="Rental Motor - Rentals Management"
+                                        class="project-screenshot"
+                                        loading="lazy">
+                                    <img
+                                        src="project/project4/kelola_pengguna_admin.png"
+                                        alt="Rental Motor - User Management"
+                                        class="project-screenshot"
+                                        loading="lazy">
+                                    <img
+                                        src="project/project4/kasir-daftar-sewa.png"
+                                        alt="Rental Motor - Kasir Daftar Sewa"
+                                        class="project-screenshot"
+                                        loading="lazy">
+                                    <img
+                                        src="project/project4/kasir-status-sewa.png"
+                                        alt="Rental Motor - Kasir Status Sewa"
+                                        class="project-screenshot"
+                                        loading="lazy">
+                                </div>
+                                <button class="gallery-nav gallery-prev"
+                                    onclick="slideGallery(this, -1)">
+                                    <i class="fas fa-chevron-left"></i>
+                                </button>
+                                <button class="gallery-nav gallery-next"
+                                    onclick="slideGallery(this, 1)">
+                                    <i class="fas fa-chevron-right"></i>
+                                </button>
+                                <div class="gallery-dots">
+                                    <span class="dot active"
+                                        data-index="0"></span>
+                                    <span class="dot" data-index="1"></span>
+                                    <span class="dot" data-index="2"></span>
+                                    <span class="dot" data-index="3"></span>
+                                    <span class="dot" data-index="4"></span>
+                                    <span class="dot" data-index="5"></span>
+                                    <span class="dot" data-index="6"></span>
+                                    <span class="dot" data-index="7"></span>
+                                </div>
+                                <div class="project-overlay">
+                                    <a href="#"
+                                        onclick="openFullGallery('rental-motor'); return false;"
+                                        class="project-link view-project-link">
+                                        <i class="fas fa-eye"></i> View Project
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="project-info">
+                                <h3>Rental Motor Application</h3>
+                                <p>Motorcycle rental management system with
+                                    booking, inventory, and customer
+                                    management.</p>
+                                <div class="project-tech">
+                                    <span>PHP</span>
+                                    <span>Laravel</span>
+                                    <span>Blade</span>
+                                    <span>Filament</span>
+                                    <span>MySQL</span>
+                                </div>
+                                <div class="project-links">
+                                    <a
+                                        href="https://github.com/Daalleee/project-rental-motor.git"
+                                        target="_blank"
+                                        class="project-link">
+                                        <i class="fab fa-github"></i> GitHub
+                                    </a>
+                                </div>
                             </div>
                         </div>
                     </div>
+                </div>
 
-                    <!-- ========================================== -->
-                    <!-- PROJECT 6: Power BI - Customer Analytics -->
-                    <!-- ========================================== -->
-                    <div class="project-card" data-project="powerbi-customer">
-                        <div class="project-gallery">
-                            <div class="project-image-slider">
-                                <img src="project/project6/image.png" alt="Customer Overview"
-                                    class="project-screenshot active" loading="lazy">
+                <!-- Data Analysis & Business Intelligence Projects -->
+                <div id="projects-data" class="project-category">
+                    <h3 class="category-title"><i class="fas fa-chart-bar"></i>
+                        Data Analysis & Business Intelligence</h3>
+                    <div class="projects-grid">
+                        <!-- Project 5: Power BI - Chocolate Sales Analysis -->
+                        <div class="project-card"
+                            data-project="powerbi-chocolate">
+                            <div class="project-gallery">
+                                <div class="project-image-slider">
+                                    <img
+                                        src="project/project5/Cuplikan layar 2026-03-27 150607.png"
+                                        alt="Dashboard Overview"
+                                        class="project-screenshot active"
+                                        loading="lazy">
+                                    <img
+                                        src="project/project5/Cuplikan layar 2026-03-27 150633.png"
+                                        alt="Revenue by Country"
+                                        class="project-screenshot"
+                                        loading="lazy">
+                                    <img
+                                        src="project/project5/Cuplikan layar 2026-03-27 150651.png"
+                                        alt="Salesperson Performance"
+                                        class="project-screenshot"
+                                        loading="lazy">
+                                    <img
+                                        src="project/project5/Cuplikan layar 2026-03-27 150710.png"
+                                        alt="Top Products"
+                                        class="project-screenshot"
+                                        loading="lazy">
+                                    <img src="project/project5/"
+                                        alt="performa team"
+                                        class="project-screenshot"
+                                        loading="lazy">
+                                </div>
+                                <button class="gallery-nav gallery-prev"
+                                    onclick="slideGallery(this, -1)">
+                                    <i class="fas fa-chevron-left"></i>
+                                </button>
+                                <button class="gallery-nav gallery-next"
+                                    onclick="slideGallery(this, 1)">
+                                    <i class="fas fa-chevron-right"></i>
+                                </button>
+                                <div class="gallery-dots">
+                                    <span class="dot active"
+                                        data-index="0"></span>
+                                    <span class="dot" data-index="1"></span>
+                                    <span class="dot" data-index="2"></span>
+                                    <span class="dot" data-index="3"></span>
+                                    <span class="dot" data-index="4"></span>
+                                    <span class="dot" data-index="5"></span>
+                                </div>
+                                <div class="project-overlay">
+                                    <a href="#"
+                                        onclick="openFullGallery('powerbi-chocolate'); return false;"
+                                        class="project-link view-project-link">
+                                        <i class="fas fa-eye"></i> View Project
+                                    </a>
+                                </div>
                             </div>
-                            <button class="gallery-nav gallery-prev" onclick="slideGallery(this, -1)">
-                                <i class="fas fa-chevron-left"></i>
-                            </button>
-                            <button class="gallery-nav gallery-next" onclick="slideGallery(this, 1)">
-                                <i class="fas fa-chevron-right"></i>
-                            </button>
-                            <div class="project-overlay">
-                                <a href="#" onclick="openFullGallery('powerbi-customer'); return false;"
-                                    class="project-link view-project-link">
-                                    <i class="fas fa-eye"></i> View Project
-                                </a>
+                            <div class="project-info">
+                                <h3>Chocolate Sales Analysis - Power BI
+                                    Dashboard</h3>
+                                <p>Interactive business intelligence dashboard
+                                    analyzing chocolate sales performance with
+                                    7,905 transactions and $44.7M revenue
+                                    insights.</p>
+                                <div class="project-tech">
+                                    <span>Data Cleaning</span>
+                                    <span>Power BI</span>
+                                    <span>DAX</span>
+                                    <span>Data Modeling</span>
+                                    <span>Data Visualization</span>
+                                </div>
+                                <div class="project-links">
+                                    <a href="#" class="project-link"
+                                        onclick="alert('Power BI report will be available soon!'); return false;">
+                                        <i class="fas fa-chart-bar"></i> View
+                                        Dashboard
+                                    </a>
+                                </div>
                             </div>
                         </div>
-                        <div class="project-info">
-                            <h3>E-Commerce Sales Performance Dashboard</h3>
-                            <p>I recently completed an end-to-end Online
-                                Retail Sales Analysis project using Python
-                                and Power BI. By processing over 541,000+
-                                raw transactions, I transformed messy data
-                                into a strategic dashboard that reveals key
-                                consumer behaviors.</p>
-                            <div class="project-tech">
-                                <span>Python</span>
-                                <span>Data Cleaning</span>
-                                <span>Exploratory Data Analysis</span>
-                                <span>Feature Engineering</span>
-                                <span>PBusiness Insights</span>
-                                <span>Power BI</span> <span>DAX</span>
-                                <span>Data Modeling</span>
-                            </div>
-                            <div class="project-links">
-                                <a href="#" class="project-link"
-                                    onclick="alert('Dashboard will be available soon!'); return false;">
-                                    <i class="fas fa-chart-bar"></i> View
-                                    Dashboard
-                                </a>
-                            </div>
-                        </div>
-                    </div>
 
-                    <!-- ========================================== -->
-                    <!-- PROJECT 7: Power BI - Financial Analytics -->
-                    <!-- ========================================== -->
-                    <div class="project-card" data-project="powerbi-financial">
-                        <div class="project-gallery">
-                            <div class="project-image-slider">
-                                <img src="project/project7/Cuplikan layar 2026-03-29 030346.png"
-                                    alt="Financial Overview" class="project-screenshot active" loading="lazy">
-                                <img src="project/project7/Cuplikan layar 2026-03-29 030402.png" alt="Revenue Analysis"
-                                    class="project-screenshot" loading="lazy">
-                                <img src="project/project7/Cuplikan layar 2026-03-29 030414.png" alt="Expense Tracking"
-                                    class="project-screenshot" loading="lazy">
-                                <img src="project/project7/Cuplikan layar 2026-03-29 030424.png" alt="Profit Margins"
-                                    class="project-screenshot" loading="lazy">
+                        <!-- ========================================== -->
+                        <!-- PROJECT 6: Power BI - Customer Analytics -->
+                        <!-- ========================================== -->
+                        <div class="project-card"
+                            data-project="powerbi-customer">
+                            <div class="project-gallery">
+                                <div class="project-image-slider">
+                                    <img src="project/project6/image.png"
+                                        alt="Customer Overview"
+                                        class="project-screenshot active"
+                                        loading="lazy">
+                                </div>
+                                <button class="gallery-nav gallery-prev"
+                                    onclick="slideGallery(this, -1)">
+                                    <i class="fas fa-chevron-left"></i>
+                                </button>
+                                <button class="gallery-nav gallery-next"
+                                    onclick="slideGallery(this, 1)">
+                                    <i class="fas fa-chevron-right"></i>
+                                </button>
+                                <div class="project-overlay">
+                                    <a href="#"
+                                        onclick="openFullGallery('powerbi-customer'); return false;"
+                                        class="project-link view-project-link">
+                                        <i class="fas fa-eye"></i> View Project
+                                    </a>
+                                </div>
                             </div>
-                            <button class="gallery-nav gallery-prev" onclick="slideGallery(this, -1)">
-                                <i class="fas fa-chevron-left"></i>
-                            </button>
-                            <button class="gallery-nav gallery-next" onclick="slideGallery(this, 1)">
-                                <i class="fas fa-chevron-right"></i>
-                            </button>
-                            <div class="gallery-dots">
-                                <span class="dot active" data-index="0"></span>
-                                <span class="dot" data-index="1"></span>
-                                <span class="dot" data-index="2"></span>
-                                <span class="dot" data-index="3"></span>
-                            </div>
-                            <div class="project-overlay">
-                                <a href="#" onclick="openFullGallery('powerbi-financial'); return false;"
-                                    class="project-link view-project-link">
-                                    <i class="fas fa-eye"></i> View Project
-                                </a>
-                            </div>
-                        </div>
-                        <div class="project-info">
-                            <h3>HR Analytics & Employee Attrition
-                                Dashboard</h3>
-                            <p>I recently completed a comprehensive HR
-                                Analytics project using Power BI and DAX. By
-                                analyzing employee data, attrition trends,
-                                performance metrics, and compensation
-                                information, I created an interactive
-                                dashboard that highlights workforce
-                                distribution, attrition risks, and
-                                actionable insights for HR
-                                decision-making.</p>
-                            <div class="project-tech">
-                                <span>Power BI</span>
-                                <span>DAX</span>
-                                <span>Data Cleaning</span>
-                                <span>Data Modeling</span>
-                                <span>Exploratory Data Analysis</span>
-                                <span>Business Insights</span>
-                                <span>Visualization</span>
-                                <span>HR Analytics</span>
-                            </div>
-                            <div class="project-links">
-                                <a href="#" class="project-link"
-                                    onclick="alert('Dashboard will be available soon!'); return false;">
-                                    <i class="fas fa-chart-bar"></i> View
-                                    Dashboard
-                                </a>
+                            <div class="project-info">
+                                <h3>E-Commerce Sales Performance Dashboard</h3>
+                                <p>I recently completed an end-to-end Online
+                                    Retail Sales Analysis project using Python
+                                    and Power BI. By processing over 541,000+
+                                    raw transactions, I transformed messy data
+                                    into a strategic dashboard that reveals key
+                                    consumer behaviors.</p>
+                                <div class="project-tech">
+                                    <span>Python</span>
+                                    <span>Data Cleaning</span>
+                                    <span>Exploratory Data Analysis</span>
+                                    <span>Feature Engineering</span>
+                                    <span>PBusiness Insights</span>
+                                    <span>Power BI</span> <span>DAX</span>
+                                    <span>Data Modeling</span>
+                                </div>
+                                <div class="project-links">
+                                    <a href="#" class="project-link"
+                                        onclick="alert('Dashboard will be available soon!'); return false;">
+                                        <i class="fas fa-chart-bar"></i> View
+                                        Dashboard
+                                    </a>
+                                </div>
                             </div>
                         </div>
-                    </div>
 
-                    <!-- ========================================== -->
-                    <!-- PROJECT 8: Power BI - Supply Chain Analytics -->
-                    <!-- ========================================== -->
-                    <div class="project-card" data-project="powerbi-supply">
-                        <div class="project-gallery">
-                            <div class="project-image-slider">
-                                <img src="images/powerbi-supply/supply-overview.png" alt="Supply Chain Overview"
-                                    class="project-screenshot active" loading="lazy">
-                                <img src="images/powerbi-supply/inventory-levels.png" alt="Inventory Levels"
-                                    class="project-screenshot" loading="lazy">
-                                <img src="images/powerbi-supply/supplier-performance.png" alt="Supplier Performance"
-                                    class="project-screenshot" loading="lazy">
-                                <img src="images/powerbi-supply/delivery-tracking.png" alt="Delivery Tracking"
-                                    class="project-screenshot" loading="lazy">
+                        <!-- ========================================== -->
+                        <!-- PROJECT 7: Power BI - Financial Analytics -->
+                        <!-- ========================================== -->
+                        <div class="project-card"
+                            data-project="powerbi-financial">
+                            <div class="project-gallery">
+                                <div class="project-image-slider">
+                                    <img
+                                        src="project/project7/Cuplikan layar 2026-03-29 030346.png"
+                                        alt="Financial Overview"
+                                        class="project-screenshot active"
+                                        loading="lazy">
+                                    <img
+                                        src="project/project7/Cuplikan layar 2026-03-29 030402.png"
+                                        alt="Revenue Analysis"
+                                        class="project-screenshot"
+                                        loading="lazy">
+                                    <img
+                                        src="project/project7/Cuplikan layar 2026-03-29 030414.png"
+                                        alt="Expense Tracking"
+                                        class="project-screenshot"
+                                        loading="lazy">
+                                    <img
+                                        src="project/project7/Cuplikan layar 2026-03-29 030424.png"
+                                        alt="Profit Margins"
+                                        class="project-screenshot"
+                                        loading="lazy">
+                                </div>
+                                <button class="gallery-nav gallery-prev"
+                                    onclick="slideGallery(this, -1)">
+                                    <i class="fas fa-chevron-left"></i>
+                                </button>
+                                <button class="gallery-nav gallery-next"
+                                    onclick="slideGallery(this, 1)">
+                                    <i class="fas fa-chevron-right"></i>
+                                </button>
+                                <div class="gallery-dots">
+                                    <span class="dot active"
+                                        data-index="0"></span>
+                                    <span class="dot" data-index="1"></span>
+                                    <span class="dot" data-index="2"></span>
+                                    <span class="dot" data-index="3"></span>
+                                </div>
+                                <div class="project-overlay">
+                                    <a href="#"
+                                        onclick="openFullGallery('powerbi-financial'); return false;"
+                                        class="project-link view-project-link">
+                                        <i class="fas fa-eye"></i> View Project
+                                    </a>
+                                </div>
                             </div>
-                            <button class="gallery-nav gallery-prev" onclick="slideGallery(this, -1)">
-                                <i class="fas fa-chevron-left"></i>
-                            </button>
-                            <button class="gallery-nav gallery-next" onclick="slideGallery(this, 1)">
-                                <i class="fas fa-chevron-right"></i>
-                            </button>
-                            <div class="gallery-dots">
-                                <span class="dot active" data-index="0"></span>
-                                <span class="dot" data-index="1"></span>
-                                <span class="dot" data-index="2"></span>
-                                <span class="dot" data-index="3"></span>
-                            </div>
-                            <div class="project-overlay">
-                                <a href="#" onclick="openFullGallery('powerbi-supply'); return false;"
-                                    class="project-link view-project-link">
-                                    <i class="fas fa-eye"></i> View Project
-                                </a>
+                            <div class="project-info">
+                                <h3>HR Analytics & Employee Attrition
+                                    Dashboard</h3>
+                                <p>I recently completed a comprehensive HR
+                                    Analytics project using Power BI and DAX. By
+                                    analyzing employee data, attrition trends,
+                                    performance metrics, and compensation
+                                    information, I created an interactive
+                                    dashboard that highlights workforce
+                                    distribution, attrition risks, and
+                                    actionable insights for HR
+                                    decision-making.</p>
+                                <div class="project-tech">
+                                    <span>Power BI</span>
+                                    <span>DAX</span>
+                                    <span>Data Cleaning</span>
+                                    <span>Data Modeling</span>
+                                    <span>Exploratory Data Analysis</span>
+                                    <span>Business Insights</span>
+                                    <span>Visualization</span>
+                                    <span>HR Analytics</span>
+                                </div>
+                                <div class="project-links">
+                                    <a href="#" class="project-link"
+                                        onclick="alert('Dashboard will be available soon!'); return false;">
+                                        <i class="fas fa-chart-bar"></i> View
+                                        Dashboard
+                                    </a>
+                                </div>
                             </div>
                         </div>
-                        <div class="project-info">
-                            <h3>Coming Soon</h3>
-                            <p>End-to-end supply chain visibility dashboard
-                                monitoring inventory, supplier performance,
-                                and delivery metrics.</p>
-                            <div class="project-tech">
-                                <span>Power BI</span>
-                                <span>DAX</span>
-                                <span>Supply Chain Analytics</span>
-                                <span>Data Visualization</span>
-                            </div>
-                            <div class="project-links">
-                                <a href="#" class="project-link"
-                                    onclick="alert('Dashboard will be available soon!'); return false;">
-                                    <i class="fas fa-chart-bar"></i> View
-                                    Dashboard
-                                </a>
-                            </div>
-                        </div>
-                    </div>
 
-                    <!-- ========================================== -->
-                    <!-- PROJECT 9: Power BI - HR Analytics -->
-                    <!-- ========================================== -->
-                    <div class="project-card" data-project="powerbi-hr">
-                        <div class="project-gallery">
-                            <div class="project-image-slider">
-                                <img src="images/powerbi-hr/hr-overview.png" alt="HR Overview Dashboard"
-                                    class="project-screenshot active" loading="lazy">
-                                <img src="images/powerbi-hr/employee-attrition.png" alt="Employee Attrition"
-                                    class="project-screenshot" loading="lazy">
-                                <img src="images/powerbi-hr/recruitment-metrics.png" alt="Recruitment Metrics"
-                                    class="project-screenshot" loading="lazy">
-                                <img src="images/powerbi-hr/performance-review.png" alt="Performance Review"
-                                    class="project-screenshot" loading="lazy">
+                        <!-- ========================================== -->
+                        <!-- PROJECT 8: Power BI - Supply Chain Analytics -->
+                        <!-- ========================================== -->
+                        <div class="project-card" data-project="powerbi-supply">
+                            <div class="project-gallery">
+                                <div class="project-image-slider">
+                                    <img
+                                        src="images/powerbi-supply/supply-overview.png"
+                                        alt="Supply Chain Overview"
+                                        class="project-screenshot active"
+                                        loading="lazy">
+                                    <img
+                                        src="images/powerbi-supply/inventory-levels.png"
+                                        alt="Inventory Levels"
+                                        class="project-screenshot"
+                                        loading="lazy">
+                                    <img
+                                        src="images/powerbi-supply/supplier-performance.png"
+                                        alt="Supplier Performance"
+                                        class="project-screenshot"
+                                        loading="lazy">
+                                    <img
+                                        src="images/powerbi-supply/delivery-tracking.png"
+                                        alt="Delivery Tracking"
+                                        class="project-screenshot"
+                                        loading="lazy">
+                                </div>
+                                <button class="gallery-nav gallery-prev"
+                                    onclick="slideGallery(this, -1)">
+                                    <i class="fas fa-chevron-left"></i>
+                                </button>
+                                <button class="gallery-nav gallery-next"
+                                    onclick="slideGallery(this, 1)">
+                                    <i class="fas fa-chevron-right"></i>
+                                </button>
+                                <div class="gallery-dots">
+                                    <span class="dot active"
+                                        data-index="0"></span>
+                                    <span class="dot" data-index="1"></span>
+                                    <span class="dot" data-index="2"></span>
+                                    <span class="dot" data-index="3"></span>
+                                </div>
+                                <div class="project-overlay">
+                                    <a href="#"
+                                        onclick="openFullGallery('powerbi-supply'); return false;"
+                                        class="project-link view-project-link">
+                                        <i class="fas fa-eye"></i> View Project
+                                    </a>
+                                </div>
                             </div>
-                            <button class="gallery-nav gallery-prev" onclick="slideGallery(this, -1)">
-                                <i class="fas fa-chevron-left"></i>
-                            </button>
-                            <button class="gallery-nav gallery-next" onclick="slideGallery(this, 1)">
-                                <i class="fas fa-chevron-right"></i>
-                            </button>
-                            <div class="gallery-dots">
-                                <span class="dot active" data-index="0"></span>
-                                <span class="dot" data-index="1"></span>
-                                <span class="dot" data-index="2"></span>
-                                <span class="dot" data-index="3"></span>
-                            </div>
-                            <div class="project-overlay">
-                                <a href="#" onclick="openFullGallery('powerbi-hr'); return false;"
-                                    class="project-link view-project-link">
-                                    <i class="fas fa-eye"></i> View Project
-                                </a>
+                            <div class="project-info">
+                                <h3>Coming Soon</h3>
+                                <p>End-to-end supply chain visibility dashboard
+                                    monitoring inventory, supplier performance,
+                                    and delivery metrics.</p>
+                                <div class="project-tech">
+                                    <span>Power BI</span>
+                                    <span>DAX</span>
+                                    <span>Supply Chain Analytics</span>
+                                    <span>Data Visualization</span>
+                                </div>
+                                <div class="project-links">
+                                    <a href="#" class="project-link"
+                                        onclick="alert('Dashboard will be available soon!'); return false;">
+                                        <i class="fas fa-chart-bar"></i> View
+                                        Dashboard
+                                    </a>
+                                </div>
                             </div>
                         </div>
-                        <div class="project-info">
-                            <h3>Coming Soon</h3>
-                            <p>Human resources analytics dashboard tracking
-                                employee attrition, recruitment metrics, and
-                                performance management.</p>
-                            <div class="project-tech">
-                                <span>Power BI</span>
-                                <span>DAX</span>
-                                <span>HR Analytics</span>
-                                <span>People Analytics</span>
+
+                        <!-- ========================================== -->
+                        <!-- PROJECT 9: Power BI - HR Analytics -->
+                        <!-- ========================================== -->
+                        <div class="project-card" data-project="powerbi-hr">
+                            <div class="project-gallery">
+                                <div class="project-image-slider">
+                                    <img src="images/powerbi-hr/hr-overview.png"
+                                        alt="HR Overview Dashboard"
+                                        class="project-screenshot active"
+                                        loading="lazy">
+                                    <img
+                                        src="images/powerbi-hr/employee-attrition.png"
+                                        alt="Employee Attrition"
+                                        class="project-screenshot"
+                                        loading="lazy">
+                                    <img
+                                        src="images/powerbi-hr/recruitment-metrics.png"
+                                        alt="Recruitment Metrics"
+                                        class="project-screenshot"
+                                        loading="lazy">
+                                    <img
+                                        src="images/powerbi-hr/performance-review.png"
+                                        alt="Performance Review"
+                                        class="project-screenshot"
+                                        loading="lazy">
+                                </div>
+                                <button class="gallery-nav gallery-prev"
+                                    onclick="slideGallery(this, -1)">
+                                    <i class="fas fa-chevron-left"></i>
+                                </button>
+                                <button class="gallery-nav gallery-next"
+                                    onclick="slideGallery(this, 1)">
+                                    <i class="fas fa-chevron-right"></i>
+                                </button>
+                                <div class="gallery-dots">
+                                    <span class="dot active"
+                                        data-index="0"></span>
+                                    <span class="dot" data-index="1"></span>
+                                    <span class="dot" data-index="2"></span>
+                                    <span class="dot" data-index="3"></span>
+                                </div>
+                                <div class="project-overlay">
+                                    <a href="#"
+                                        onclick="openFullGallery('powerbi-hr'); return false;"
+                                        class="project-link view-project-link">
+                                        <i class="fas fa-eye"></i> View Project
+                                    </a>
+                                </div>
                             </div>
-                            <div class="project-links">
-                                <a href="#" class="project-link"
-                                    onclick="alert('Dashboard will be available soon!'); return false;">
-                                    <i class="fas fa-chart-bar"></i> View
-                                    Dashboard
-                                </a>
+                            <div class="project-info">
+                                <h3>Coming Soon</h3>
+                                <p>Human resources analytics dashboard tracking
+                                    employee attrition, recruitment metrics, and
+                                    performance management.</p>
+                                <div class="project-tech">
+                                    <span>Power BI</span>
+                                    <span>DAX</span>
+                                    <span>HR Analytics</span>
+                                    <span>People Analytics</span>
+                                </div>
+                                <div class="project-links">
+                                    <a href="#" class="project-link"
+                                        onclick="alert('Dashboard will be available soon!'); return false;">
+                                        <i class="fas fa-chart-bar"></i> View
+                                        Dashboard
+                                    </a>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- Machine Learning Projects Section -->
-    <section id="projects-ml" class="projects-ml">
-        <div class="container">
-            <div class="project-category">
-                <h3 class="category-title"><i class="fas fa-brain"></i>
-                    Machine Learning</h3>
-                <div class="empty-category">
-                    <div class="empty-category-icon">
-                        <i class="fas fa-brain"></i>
+        <!-- Machine Learning Projects Section -->
+        <section id="projects-ml" class="projects-ml">
+            <div class="container">
+                <div class="project-category">
+                    <h3 class="category-title"><i class="fas fa-brain"></i>
+                        Machine Learning</h3>
+                    <div class="empty-category">
+                        <div class="empty-category-icon">
+                            <i class="fas fa-brain"></i>
+                        </div>
+                        <h4>Coming Soon</h4>
+                        <p>Machine Learning projects are currently in
+                            development and will be added soon.</p>
+                        <p class="empty-category-note">Stay tuned for exciting
+                            ML projects including:</p>
+                        <ul class="empty-category-list">
+                            <li><i class="fas fa-check"></i> Prediction
+                                Models</li>
+                            <li><i class="fas fa-check"></i> Classification
+                                Systems</li>
+                            <li><i class="fas fa-check"></i> NLP
+                                Applications</li>
+                            <li><i class="fas fa-check"></i> Computer Vision
+                                Projects</li>
+                        </ul>
                     </div>
-                    <h4>Coming Soon</h4>
-                    <p>Machine Learning projects are currently in
-                        development and will be added soon.</p>
-                    <p class="empty-category-note">Stay tuned for exciting
-                        ML projects including:</p>
-                    <ul class="empty-category-list">
-                        <li><i class="fas fa-check"></i> Prediction
-                            Models</li>
-                        <li><i class="fas fa-check"></i> Classification
-                            Systems</li>
-                        <li><i class="fas fa-check"></i> NLP
-                            Applications</li>
-                        <li><i class="fas fa-check"></i> Computer Vision
-                            Projects</li>
-                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Full Gallery Modal -->
+        <div class="full-gallery-modal" id="fullGalleryModal">
+            <div class="full-gallery-header">
+                <h3 id="gallery-title">Project Gallery</h3>
+                <button class="gallery-close-btn" onclick="closeFullGallery()">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <div class="full-gallery-content">
+                <button class="full-gallery-nav prev"
+                    onclick="changeFullGalleryImage(-1)">
+                    <i class="fas fa-chevron-left"></i>
+                </button>
+                <div class="full-gallery-image-container">
+                    <img src alt="Project Screenshot" id="fullGalleryImage">
+                </div>
+                <button class="full-gallery-nav next"
+                    onclick="changeFullGalleryImage(1)">
+                    <i class="fas fa-chevron-right"></i>
+                </button>
+            </div>
+            <div class="full-gallery-footer">
+                <div class="full-gallery-caption">
+                    <span id="fullGalleryCaption"></span>
+                </div>
+                <div class="full-gallery-controls">
+                    <div class="full-gallery-dots" id="fullGalleryDots"></div>
+                    <a href="#" id="fullGalleryGithubLink" target="_blank"
+                        class="github-btn">
+                        <i class="fab fa-github"></i> View on GitHub
+                    </a>
                 </div>
             </div>
         </div>
-    </section>
 
-    <!-- Full Gallery Modal -->
-    <div class="full-gallery-modal" id="fullGalleryModal">
-        <div class="full-gallery-header">
-            <h3 id="gallery-title">Project Gallery</h3>
-            <button class="gallery-close-btn" onclick="closeFullGallery()">
-                <i class="fas fa-times"></i>
-            </button>
-        </div>
-        <div class="full-gallery-content">
-            <button class="full-gallery-nav prev" onclick="changeFullGalleryImage(-1)">
-                <i class="fas fa-chevron-left"></i>
-            </button>
-            <div class="full-gallery-image-container">
-                <img src alt="Project Screenshot" id="fullGalleryImage">
-            </div>
-            <button class="full-gallery-nav next" onclick="changeFullGalleryImage(1)">
-                <i class="fas fa-chevron-right"></i>
-            </button>
-        </div>
-        <div class="full-gallery-footer">
-            <div class="full-gallery-caption">
-                <span id="fullGalleryCaption"></span>
-            </div>
-            <div class="full-gallery-controls">
-                <div class="full-gallery-dots" id="fullGalleryDots"></div>
-                <a href="#" id="fullGalleryGithubLink" target="_blank" class="github-btn">
-                    <i class="fab fa-github"></i> View on GitHub
-                </a>
-            </div>
-        </div>
-    </div>
+        <!-- Contact Section -->
+        <section id="contact" class="contact">
+            <div class="container">
+                <h2 class="section-title">Let's Work Together</h2>
+                <div class="contact-container">
 
-    <!-- Contact Section -->
-    <section id="contact" class="contact">
-        <div class="container">
-            <h2 class="section-title">Let's Work Together</h2>
-            <div class="contact-container">
+                    <div class="contact-form-container">
+                        <p class="contact-intro">Have a project in mind or want
+                            to discuss potential opportunities? I'd love to hear
+                            from you. Let's create something amazing
+                            together!</p>
 
-                <div class="contact-form-container">
-                    <p class="contact-intro">Have a project in mind or want
-                        to discuss potential opportunities? I'd love to hear
-                        from you. Let's create something amazing
-                        together!</p>
+                        <form class="contact-form" id="contactForm"
+                            action="https://api.web3forms.com/submit"
+                            method="POST">
+                            <input type="hidden" name="access_key"
+                                value="1da4437b-0f00-470c-868f-4b03157c7560">
+                            <input type="hidden" name="from_name"
+                                value="Portfolio Website">
+                            <input type="hidden" name="redirect"
+                                value="https://web3forms.com/success">
 
-                    <form class="contact-form" id="contactForm" action="https://api.web3forms.com/submit" method="POST">
-                        <input type="hidden" name="access_key" value="1da4437b-0f00-470c-868f-4b03157c7560">
-                        <input type="hidden" name="from_name" value="Portfolio Website">
-                        <input type="hidden" name="redirect" value="https://web3forms.com/success">
+                            <div class="form-group">
+                                <label for="name"><i class="fas fa-user"></i>
+                                    Your Name</label>
+                                <input type="text" id="name" name="name"
+                                    required>
+                                <span class="error-message"
+                                    id="name-error"></span>
+                            </div>
+                            <div class="form-group">
+                                <label for="email"><i
+                                        class="fas fa-envelope"></i> Your
+                                    Email</label>
+                                <input type="email" id="email" name="email"
+                                    required>
+                                <span class="error-message"
+                                    id="email-error"></span>
+                            </div>
+                            <div class="form-group">
+                                <label for="message"><i
+                                        class="fas fa-comment"></i>
+                                    Message</label>
+                                <textarea id="message" name="message" rows="5"
+                                    required></textarea>
+                                <span class="error-message"
+                                    id="message-error"></span>
+                            </div>
+                            <button type="submit" class="btn btn-primary"
+                                id="submitBtn">
+                                <span class="btn-text"><i
+                                        class="fas fa-paper-plane"></i> Send
+                                    Message</span>
+                                <span class="btn-loading"
+                                    style="display: none;">
+                                    <i class="fas fa-spinner fa-spin"></i>
+                                    Sending...
+                                </span>
+                            </button>
+                            <div class="form-message" id="formMessage"></div>
+                        </form>
 
-                        <div class="form-group">
-                            <label for="name"><i class="fas fa-user"></i>
-                                Your Name</label>
-                            <input type="text" id="name" name="name" required>
-                            <span class="error-message" id="name-error"></span>
-                        </div>
-                        <div class="form-group">
-                            <label for="email"><i class="fas fa-envelope"></i> Your
-                                Email</label>
-                            <input type="email" id="email" name="email" required>
-                            <span class="error-message" id="email-error"></span>
-                        </div>
-                        <div class="form-group">
-                            <label for="message"><i class="fas fa-comment"></i>
-                                Message</label>
-                            <textarea id="message" name="message" rows="5" required></textarea>
-                            <span class="error-message" id="message-error"></span>
-                        </div>
-                        <button type="submit" class="btn btn-primary" id="submitBtn">
-                            <span class="btn-text"><i class="fas fa-paper-plane"></i> Send
-                                Message</span>
-                            <span class="btn-loading" style="display: none;">
-                                <i class="fas fa-spinner fa-spin"></i>
-                                Sending...
-                            </span>
-                        </button>
-                        <div class="form-message" id="formMessage"></div>
-                    </form>
-
-                    <p class="contact-note"><i class="fas fa-shield-alt"></i> Your information
-                        is safe. I'll get back to you within 24-48
-                        hours.</p>
+                        <p class="contact-note"><i
+                                class="fas fa-shield-alt"></i> Your information
+                            is safe. I'll get back to you within 24-48
+                            hours.</p>
+                    </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="container">
-            <p>&copy; 2026 Leonardus Dale Masan. All rights reserved.</p>
-        </div>
-    </footer>
+        <!-- Footer -->
+        <footer class="footer">
+            <div class="container">
+                <p>&copy; 2026 Leonardus Dale Masan. All rights reserved.</p>
+            </div>
+        </footer>
 
-    <!-- Scroll to Top Button -->
-    <button class="scroll-to-top" id="scrollToTop">
-        <i class="fas fa-arrow-up"></i>
-    </button>
+        <!-- Scroll to Top Button -->
+        <button class="scroll-to-top" id="scrollToTop">
+            <i class="fas fa-arrow-up"></i>
+        </button>
 
-    <script src="js/script.js"></script>
-</body>
+        <script src="js/script.js"></script>
+    </body>
 
 </html>
