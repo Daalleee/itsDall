@@ -20,8 +20,8 @@ submenuToggles.forEach((toggle) => {
   });
 });
 
-// Close mobile menu when clicking on a link
-document.querySelectorAll(".nav-menu a").forEach((link) => {
+// Close mobile menu when clicking on a link (except submenu toggles)
+document.querySelectorAll(".nav-menu a:not(.submenu-toggle)").forEach((link) => {
   link.addEventListener("click", () => {
     if (mobileToggle) {
       mobileToggle.classList.remove("active");
@@ -62,9 +62,17 @@ const animateSkillBars = () => {
 
 // Run animation when page loads
 window.addEventListener("load", animateSkillBars);
+window.addEventListener("load", adjustAllGalleries);
 
 // Run animation when scrolling
 window.addEventListener("scroll", animateSkillBars);
+
+// Adjust galleries on resize
+let resizeTimeout;
+window.addEventListener("resize", () => {
+  clearTimeout(resizeTimeout);
+  resizeTimeout = setTimeout(adjustAllGalleries, 150);
+});
 
 // Intersection Observer for fade-in animations
 const observerOptions = {
@@ -370,6 +378,29 @@ const projectGalleries = {
 let currentFullGalleryProject = null;
 let currentFullGalleryIndex = 0;
 
+// Adjust gallery height to fit active image
+function adjustGalleryHeight(gallery) {
+  const activeImage = gallery.querySelector(".project-screenshot.active");
+  if (activeImage) {
+    // Temporarily make image visible to get its natural height
+    const img = new Image();
+    img.onload = function () {
+      const aspectRatio = img.naturalHeight / img.naturalWidth;
+      const galleryWidth = gallery.offsetWidth;
+      const neededHeight = galleryWidth * aspectRatio;
+      gallery.style.height = Math.max(250, neededHeight) + "px";
+    };
+    img.src = activeImage.src;
+  }
+}
+
+// Adjust all project gallery heights on load
+function adjustAllGalleries() {
+  document.querySelectorAll(".project-gallery").forEach((gallery) => {
+    adjustGalleryHeight(gallery);
+  });
+}
+
 // Slide gallery for project cards (mini slider)
 function slideGallery(button, direction) {
   const gallery = button.closest(".project-gallery");
@@ -393,6 +424,9 @@ function slideGallery(button, direction) {
 
   dots.forEach((dot) => dot.classList.remove("active"));
   dots[newIndex].classList.add("active");
+
+  // Adjust height after slide change
+  setTimeout(() => adjustGalleryHeight(gallery), 50);
 }
 
 // Go to specific slide in project card
@@ -407,6 +441,9 @@ function goToSlide(dot, index) {
 
   dots.forEach((d) => d.classList.remove("active"));
   dot.classList.add("active");
+
+  // Adjust height after slide change
+  setTimeout(() => adjustGalleryHeight(gallery), 50);
 }
 
 // Open Full Gallery Modal
