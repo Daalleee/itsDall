@@ -459,7 +459,6 @@ function openFullGallery(projectName) {
   const galleryImage = document.getElementById("fullGalleryImage");
   const galleryCaption = document.getElementById("fullGalleryCaption");
   const galleryDots = document.getElementById("fullGalleryDots");
-  const githubLink = document.getElementById("fullGalleryGithubLink");
 
   // Set title
   galleryTitle.textContent = gallery.title;
@@ -467,7 +466,6 @@ function openFullGallery(projectName) {
   // Set initial image
   galleryImage.src = gallery.images[0];
   galleryCaption.textContent = gallery.captions[0];
-  githubLink.href = gallery.github;
 
   // Generate dots
   galleryDots.innerHTML = "";
